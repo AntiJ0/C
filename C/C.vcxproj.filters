@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.c" />
+    <ClCompile Include="stdafx.c" />
+    <ClCompile Include="Parts\Part01.c">
+      <Filter>Part01 %28HelloWorld%29</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Parts\PartList.h" />
+    <ClInclude Include="Parts\Part01.h">
+      <Filter>Part01 %28HelloWorld%29</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Part01 %28HelloWorld%29">
+      <UniqueIdentifier>{33c4fcff-3fb7-4868-94b0-3b6b6a2514ca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
