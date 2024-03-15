@@ -6,6 +6,7 @@
     <ClCompile Include="Parts\Part01.c">
       <Filter>Part01 %28HelloWorld%29</Filter>
     </ClCompile>
+    <ClCompile Include="Parts\Part02.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -13,6 +14,7 @@
     <ClInclude Include="Parts\Part01.h">
       <Filter>Part01 %28HelloWorld%29</Filter>
     </ClInclude>
+    <ClInclude Include="Parts\Part02.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Part01 %28HelloWorld%29">
