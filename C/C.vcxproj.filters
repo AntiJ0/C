@@ -18,6 +18,9 @@
     <ClCompile Include="Parts\Part05.c">
       <Filter>Part05 %28Loop%29</Filter>
     </ClCompile>
+    <ClCompile Include="Parts\Part06.c">
+      <Filter>Part06 %28Example%29</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -37,6 +40,9 @@
     <ClInclude Include="Parts\Part05.h">
       <Filter>Part05 %28Loop%29</Filter>
     </ClInclude>
+    <ClInclude Include="Parts\Part06.h">
+      <Filter>Part06 %28Example%29</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Part01 %28HelloWorld%29">
@@ -53,6 +59,9 @@
     </Filter>
     <Filter Include="Part05 %28Loop%29">
       <UniqueIdentifier>{1dacebe0-7c77-4ecb-84ad-d396207b64d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Part06 %28Example%29">
+      <UniqueIdentifier>{9dc2631e-2f2b-468f-8d89-ed93bc72484b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
