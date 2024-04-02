@@ -7,5 +7,6 @@
 #include <stdio.h>
 //stdio.h-> Standard Input Output(표준입출력) 헤더
 #include <stdlib.h>
+#include <stdbool.h>
 
 #pragma warning(disable : 6031)
