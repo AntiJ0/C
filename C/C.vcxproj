@@ -160,11 +160,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
+    <ClCompile Include="Part07.c" />
     <ClCompile Include="Parts\Part01.c" />
     <ClCompile Include="Parts\Part02.c" />
     <ClCompile Include="Parts\Part03.c" />
     <ClCompile Include="Parts\Part04.c" />
     <ClCompile Include="Parts\Part05.c" />
+    <ClCompile Include="Parts\Part06.c" />
     <ClCompile Include="stdafx.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -173,11 +175,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Part07.h" />
     <ClInclude Include="Parts\Part01.h" />
     <ClInclude Include="Parts\Part02.h" />
     <ClInclude Include="Parts\Part03.h" />
     <ClInclude Include="Parts\Part04.h" />
     <ClInclude Include="Parts\Part05.h" />
+    <ClInclude Include="Parts\Part06.h" />
     <ClInclude Include="Parts\PartList.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
