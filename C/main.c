@@ -5,6 +5,10 @@
 //실행 시작시 메인함수로 가장 먼저 진입
 //커밋 테스트
 
+//전역변수
+int globalVal = 20;
+
+
 int main()
 {
 	//Part01();
@@ -13,7 +17,8 @@ int main()
 	//Part04();
 	//Part05();
 	//Part06();
-	Part07();
+	//Part07();
+	Part08();
 
 	//return -> 함수를 종료
 	return 0; //숫자 0 코드를 반환하고 메인함수를 종료(main함수의 정상적 종료를 의미)

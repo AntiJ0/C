@@ -17,7 +17,7 @@ void Operator()
 	int num1 = 0, num2 = 0;
 	
 	printf("정수 2개 입력 :");
-	scanf("%d %d", & num1, &num2);
+	scanf("%d %d", &num1, &num2);
 
 	//증감연산자
 

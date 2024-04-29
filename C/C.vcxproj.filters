@@ -21,8 +21,11 @@
     <ClCompile Include="Parts\Part06.c">
       <Filter>Part06 %28Example%29</Filter>
     </ClCompile>
-    <ClCompile Include="Part07.c">
+    <ClCompile Include="Parts\Part07.c">
       <Filter>Part07 %28Array%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Parts\Part08.c">
+      <Filter>Part08 %28Function%29</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -46,8 +49,11 @@
     <ClInclude Include="Parts\Part06.h">
       <Filter>Part06 %28Example%29</Filter>
     </ClInclude>
-    <ClInclude Include="Part07.h">
+    <ClInclude Include="Parts\Part07.h">
       <Filter>Part07 %28Array%29</Filter>
+    </ClInclude>
+    <ClInclude Include="Parts\Part08.h">
+      <Filter>Part08 %28Function%29</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +77,9 @@
     </Filter>
     <Filter Include="Part07 %28Array%29">
       <UniqueIdentifier>{de7a5d34-df0f-4fa9-ba78-7bbbc8c3297f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Part08 %28Function%29">
+      <UniqueIdentifier>{14a0bd4c-bcf1-49e6-addc-bc86b15eff48}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
