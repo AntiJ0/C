@@ -3,9 +3,9 @@
 
 void Part07()
 {
-	//Array();
+	Array();
 	//TwoDimensionalArray();
-	String();
+	//String();
 }
 
 void Array()
