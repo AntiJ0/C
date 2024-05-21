@@ -33,6 +33,9 @@
     <ClCompile Include="Parts\Part10.c">
       <Filter>Part10 %28Pointer%29</Filter>
     </ClCompile>
+    <ClCompile Include="Parts\Part11.c">
+      <Filter>Part11 %28FunctionPointer%29</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -67,6 +70,9 @@
     <ClInclude Include="Part10.h">
       <Filter>Part10 %28Pointer%29</Filter>
     </ClInclude>
+    <ClInclude Include="Parts\Part11.h">
+      <Filter>Part11 %28FunctionPointer%29</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Part01 %28HelloWorld%29">
@@ -98,6 +104,9 @@
     </Filter>
     <Filter Include="Part10 %28Pointer%29">
       <UniqueIdentifier>{93e7c462-4148-4214-b1c5-23c089eb220e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Part11 %28FunctionPointer%29">
+      <UniqueIdentifier>{0aa23abe-eab2-4265-957f-26932c8b20eb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

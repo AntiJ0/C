@@ -170,6 +170,7 @@
     <ClCompile Include="Parts\Part08.c" />
     <ClCompile Include="Parts\Part09.c" />
     <ClCompile Include="Parts\Part10.c" />
+    <ClCompile Include="Parts\Part11.c" />
     <ClCompile Include="stdafx.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -188,6 +189,7 @@
     <ClInclude Include="Parts\Part06.h" />
     <ClInclude Include="Parts\Part08.h" />
     <ClInclude Include="Parts\Part09.h" />
+    <ClInclude Include="Parts\Part11.h" />
     <ClInclude Include="Parts\PartList.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
