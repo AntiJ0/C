@@ -11,3 +11,5 @@ void InitializeArray();
 void InitArrayByPtr(int* arr, int len);
 
 void PointerToPointer();
+void SwapByP(int* ptr1, int* ptr2);
+void SwapByPP(int** pp1, int** pp2);
