@@ -10,5 +10,8 @@
 #include <stdbool.h>
 #include <time.h>
 #include <string.h>
+#include <assert.h>
 
 #pragma warning(disable : 6031)
+
+#define SAFE_FREE(p) if (p) { free(p); p = NULL; }
