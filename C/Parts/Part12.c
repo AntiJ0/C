@@ -3,7 +3,8 @@
 
 void Part12()
 {
-	MemoryAllocation();
+	//MemoryAllocation();
+	TwoDimensionalArrayMemoryAllocation();
 }
 
 void MemoryAllocation()
@@ -64,8 +65,86 @@ void MemoryAllocation()
 
 	int* arr = (int*)malloc(sizeof(int) * len);
 	assert(arr != NULL);
+	printf("배열 재할당 완료! 초기 배열 주소 : %p\n", arr);
 
+	int ordinal = 0;
+	int input = 0;
 
+	printf("\n");
+	
+	while (true)
+	{
+		printf("%d번째 정수 입력 : ", ordinal + 1);
+		scanf("%d", &input);
+
+		if (input == 0)
+			break;
+
+		if (ordinal >= len)
+		{
+			len *= 2;
+			int* newArr = (int*)malloc(sizeof(int) * len);
+			assert(newArr != NULL);
+
+			for (int i = 0; i < ordinal; ++i)
+				newArr[i] = arr[i];
+
+			SAFE_FREE(arr);
+			arr = newArr;
+			printf("배열 재할당 완료! 현재 배열 주소 : %p\n", arr);
+		}
+
+		arr[ordinal++] = input;
+	}
+
+	printf("\n===== 동적 할당 배열 원소 =====\n");
+	for (int i = 0; i < ordinal; ++i)
+		printf("%d ", arr[i]);
+
+	printf("\n");
 
 	SAFE_FREE(arr);
+}
+
+void TwoDimensionalArrayMemoryAllocation()
+{
+	int row = 0;
+	int col = 0;
+
+	printf("행렬 크기 입력 : ");
+	scanf("%d %d", &row, &col);
+
+	//2차원 배열 matrix를 동적 할당
+
+	int** matrix = (int**)malloc(sizeof(int*) * row);
+	assert(matrix != NULL);
+	//for (int i = 0; i < row; ++i)
+	//{
+	//   	matrix[i] = (int*)malloc(sizeof(int) * col);
+	//  	assert(matrix[i] != NULL);
+	//}
+	matrix[0] = (int*)malloc(sizeof(int) * row * col);
+	assert(matrix[0] != NULL);
+	for (int i = 1; i < row; ++i)
+		matrix[i] = matrix[i - 1] + col;
+
+	int num = 0;
+	for (int i = 0; i < row; ++i)
+		for (int j = 0; j < col; ++j)
+			matrix[i][j] = ++num;
+
+	printf("\n===== 행렬 원소 =====\n");
+	for (int i = 0; i < row; ++i)
+	{
+		for (int j = 0; j < col; ++j)
+			printf("%03d, ", matrix[i][j]);
+
+		printf("\n");
+	}
+
+	//for (int i = 0; i < row; ++i)
+		//SAFE_FREE(matrix[i]);
+	SAFE_FREE(matrix[0]);
+
+	SAFE_FREE(matrix);
 }
