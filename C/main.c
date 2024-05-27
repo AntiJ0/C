@@ -22,7 +22,8 @@ int main()
 	//Part09();
 	//Part10();
 	//Part11();
-	Part12();
+	//Part12();
+	Part13();
 
 	//return -> 함수를 종료
 	return 0; //숫자 0 코드를 반환하고 메인함수를 종료(main함수의 정상적 종료를 의미)

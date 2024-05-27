@@ -39,6 +39,9 @@
     <ClCompile Include="Parts\Part12.c">
       <Filter>Part12 %28MemoryAllocation%29</Filter>
     </ClCompile>
+    <ClCompile Include="Parts\Part13.c">
+      <Filter>Part13 %28FileIO%29</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -79,6 +82,9 @@
     <ClInclude Include="Parts\Part12.h">
       <Filter>Part12 %28MemoryAllocation%29</Filter>
     </ClInclude>
+    <ClInclude Include="Parts\Part13.h">
+      <Filter>Part13 %28FileIO%29</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Part01 %28HelloWorld%29">
@@ -116,6 +122,9 @@
     </Filter>
     <Filter Include="Part12 %28MemoryAllocation%29">
       <UniqueIdentifier>{bab5e656-0a33-4f5a-985f-79ac6524e705}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Part13 %28FileIO%29">
+      <UniqueIdentifier>{c6cc0b4a-e5fb-443f-baf0-f8dee7f6ae7c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
