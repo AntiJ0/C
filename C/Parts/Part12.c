@@ -4,7 +4,9 @@
 void Part12()
 {
 	//MemoryAllocation();
-	TwoDimensionalArrayMemoryAllocation();
+	//TwoDimensionalArrayMemoryAllocation();
+	//ClearAllocation();
+	ReAllocation();
 }
 
 void MemoryAllocation()
@@ -147,4 +149,97 @@ void TwoDimensionalArrayMemoryAllocation()
 	SAFE_FREE(matrix[0]);
 
 	SAFE_FREE(matrix);
+
+
+}
+
+void ClearAllocation()
+{
+	int len = 0;
+
+	printf("배열 크기 입력 : ");
+	scanf("%d", &len);
+
+	int* arr1 = (int*)malloc(sizeof(int) * len);
+	int* arr2 = (int*)calloc(len, sizeof(int));
+	int* arr3 = (int*)ClearAlloc(len, sizeof(int));
+
+	printf("\n===== 배열 1 원소 =====\n");
+	for (int i = 0; i < len; ++i)
+		printf("%d ", arr1[i]);
+
+	printf("\n===== 배열 2 원소 =====\n");
+	for (int i = 0; i < len; ++i)
+		printf("%d ", arr2[i]);
+	//calloc -> 0초기화를 해주며 동적 할당함
+
+	printf("\n===== 배열 3 원소 =====\n");
+	for (int i = 0; i < len; ++i)
+		printf("%d ", arr3[i]);
+
+	printf("\n");
+
+	SAFE_FREE(arr1);
+}
+
+void* ClearAlloc(int count, int size)
+{
+	int totalSize = count * size;
+	void* buffer = malloc(totalSize);
+	assert(buffer != NULL);
+
+	//for (int i = 0; i < totalSize; ++i)
+	//	*((char*)buffer + i) = 0;
+
+	//memoryset, 위의 기능을 대체해줌
+	memset(buffer, 0, totalSize);
+
+	return buffer;
+}
+
+void ReAllocation()
+{
+	int len = 0;
+
+	printf("초기 배열 크기 입력 : ");
+	scanf("%d", &len);
+
+	int* arr = (int*)malloc(sizeof(int) * len);
+	assert(arr != NULL);
+	printf("배열 재할당 완료! 초기 배열 주소 : %p\n", arr);
+
+	int ordinal = 0;
+	int input = 0;
+
+	printf("\n");
+
+	while (true)
+	{
+		printf("%d번째 정수 입력 : ", ordinal + 1);
+		scanf("%d", &input);
+
+		if (input == 0)
+			break;
+
+		if (ordinal >= len)
+		{
+			len *= 2;
+			int* temp = (int*)realloc(arr, sizeof(int) * len);
+			assert(temp != NULL);
+			arr = temp;
+			temp = NULL;
+
+			printf("배열 재할당 완료! 현재 배열 주소 : %p\n", arr);
+		}
+
+		arr[ordinal++] = input;
+	}
+
+	printf("\n===== 동적 할당 배열 원소 =====\n");
+	for (int i = 0; i < ordinal; ++i)
+		printf("%d ", arr[i]);
+
+	printf("\n");
+
+	SAFE_FREE(arr);
 }
