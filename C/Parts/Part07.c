@@ -3,9 +3,9 @@
 
 void Part07()
 {
-	Array();
+	//Array();
 	//TwoDimensionalArray();
-	//String();
+	String();
 }
 
 void Array()
@@ -196,7 +196,7 @@ void String()
 	char str2[] = "aaac";
 	//strcmp -> string compare
 	//두 문자열에서 앞에서부터 같은 문자까지는 무시하고 가장 먼저 서로 다른 문자가 나온 시점에서 해당 문자의 아스키코드를 비교함
-	//앞이 더 작으면 -1, 더 같으면 0, 크면 1이 출력됨
+	//앞이 더 작으면 -1, 같으면 0, 크면 1이 출력됨
 	printf("문자열 1, 2 비교 : %d\n\n", strcmp(string, string2));
 
 	//strchr -> string character
@@ -204,8 +204,9 @@ void String()
 	//주소값을 찾지 못했을 경우(해당 문자가 포함되지 않을 경우) NULL 문자를 반환함
 	//strstr -> string string
 	//strchr과 동일하게 작동하지만 문자 1개 이상을 찾을 수 있음
-	printf("문자열 1의 T문자 포함 여부 : %d\n", strchr(string, 'T') != NULL);	
+	printf("문자열 1의 T문자 포함 여부 : %d\n", strchr(string, 'T') != NULL);
 	printf("문자열 2의 World문자 포함 여부 : %d\n", strstr(string2, "World") != NULL);
+
 	
 	//_strrev -> string reverse
 	//문자열의 문자를 반전시킴

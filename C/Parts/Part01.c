@@ -1,4 +1,4 @@
-	#include "stdafx.h"
+#include "stdafx.h"
 #include "Part01.h"
 
 //傈贸府巩(傈贸府 -> 哪颇老(锅开))

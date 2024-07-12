@@ -28,7 +28,7 @@ void DataSize()
 	//int -> 4byte 
 	char ch = 'A';
 	//1 byte
-	//정수 or 문자 1개를 담을때 사
+	//정수 or 문자 1개를 담을때 사용
 	//컴퓨터는 'A'를 숫자로 인식
 	short shortNum = 10;
 	int integerNum = 20;
@@ -41,7 +41,6 @@ void DataSize()
 	long double longDoubleNum = 10.3;
 	//현재 사용중인 컴파일 => vc++ => long double 8byte로 처리
 	//표준을 따르는 컴파일 => gcc, g++ => long double 16byte로 처리
-
 
 	printf("===== 문자형 출력 =====\n");
 	printf("Char (%llu) : %c\n\n", sizeof(ch), ch);
