@@ -4,8 +4,8 @@
 void Part10()
 {
 	//Pointer();
-	//InitializeArray();
-	PointerToPointer();
+	InitializeArray();
+	//PointerToPointer();
 }
 
 void Pointer()

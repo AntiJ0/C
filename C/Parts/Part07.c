@@ -36,7 +36,7 @@ void Array()
 
 	int arr2[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-	//배열 길이 = 배열 전체 길이 / 원소 1개 크기
+	//배열 길이 = 배열 전체 크기 / 원소 1개 크기
 
 	const int size2 = sizeof(arr2) / sizeof(arr2[0]);
 	//const -> 변수를 상수로 바꿈

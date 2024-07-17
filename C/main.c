@@ -17,10 +17,10 @@ int main()
 	//Part04();
 	//Part05();
 	//Part06();
-	Part07();
+	//Part07();
 	//Part08();
 	//Part09();
-	//Part10();
+	Part10();
 	//Part11();
 	//Part12();
 	//Part13();
