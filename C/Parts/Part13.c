@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Part13.h"
 
 void Part13()
@@ -10,19 +10,19 @@ void Part13()
 void TextIO()
 {
 	/*
-	½ºÆ®¸² »ý¼º ¸ðµå
-	w(rite) -> ¾²±â°¡ °¡´ÉÇÑ ½ºÆ®¸²À» ¿¬´Ù
-	r(ead) -> ÀÐ±â°¡ °¡´ÉÇÑ ½ºÆ®¸²À» ¿¬´Ù
+	ìŠ¤íŠ¸ë¦¼ ìƒì„± ëª¨ë“œ
+	w(rite) -> ì“°ê¸°ê°€ ê°€ëŠ¥í•œ ìŠ¤íŠ¸ë¦¼ì„ ì—°ë‹¤
+	r(ead) -> ì½ê¸°ê°€ ê°€ëŠ¥í•œ ìŠ¤íŠ¸ë¦¼ì„ ì—°ë‹¤
 	a(dd)
-	w+ -> ¾²±â¿Í ÀÐ±â°¡ ¸ðµÎ °¡´ÉÇÑ ½ºÆ®¸²À» ¿¬´Ù
-	r+ -> w+¿Í °°Àº ±â´ÉÀ» ÇÏÁö¸¸, ÆÄÀÏÀÌ Á¸ÀçÇÏÁö ¾Ê´Â´Ù¸é ½ºÆ®¸²À» ¿­Áö ¸øÇÑ´Ù
-	a+ -> ÀÌ¾î¾²¸é¼­ ÀÐ±â°¡ °¡´ÉÇÑ ½ºÆ®¸²À» ¿¬´Ù
+	w+ -> ì“°ê¸°ì™€ ì½ê¸°ê°€ ëª¨ë‘ ê°€ëŠ¥í•œ ìŠ¤íŠ¸ë¦¼ì„ ì—°ë‹¤
+	r+ -> w+ì™€ ê°™ì€ ê¸°ëŠ¥ì„ í•˜ì§€ë§Œ, íŒŒì¼ì´ ì¡´ìž¬í•˜ì§€ ì•ŠëŠ”ë‹¤ë©´ ìŠ¤íŠ¸ë¦¼ì„ ì—´ì§€ ëª»í•œë‹¤
+	a+ -> ì´ì–´ì“°ë©´ì„œ ì½ê¸°ê°€ ê°€ëŠ¥í•œ ìŠ¤íŠ¸ë¦¼ì„ ì—°ë‹¤
 
-	µ¥ÀÌÅÍ ÀÔÃâ·Â ¸ðµå
-	t(ext) -> ÅØ½ºÆ® ÇüÅÂ
-	b(inary) -> ÀÌÁø µ¥ÀÌÅÍ ÇüÅÂ
+	ë°ì´í„° ìž…ì¶œë ¥ ëª¨ë“œ
+	t(ext) -> í…ìŠ¤íŠ¸ í˜•íƒœ
+	b(inary) -> ì´ì§„ ë°ì´í„° í˜•íƒœ
 
-	µÎ ¸ðµåÀÇ ¾Õ ¾ËÆÄºªÀ» ÇÏ³ª¾¿ ÇÕÃÄ¼­ ÀÔ·Â
+	ë‘ ëª¨ë“œì˜ ì•ž ì•ŒíŒŒë²³ì„ í•˜ë‚˜ì”© í•©ì³ì„œ ìž…ë ¥
 	*/
 
 	FILE* wStream = fopen("01.txt", "wt");
@@ -32,7 +32,7 @@ void TextIO()
 		//fprintf(wStream, "Hello World!\n");
 		for (int i = 0; i < 10; ++i)
 			fputs("Hello World!\n", wStream);
-		//±âÁ¸¿¡ 01.txtÆÄÀÏÀÌ ÀÖ¾ú´Ù¸é ±× ÆÄÀÏÀÇ µ¥ÀÌÅÍ¸¦ ÀüºÎ µ¤¾î¾º¿ò
+		//ê¸°ì¡´ì— 01.txtíŒŒì¼ì´ ìžˆì—ˆë‹¤ë©´ ê·¸ íŒŒì¼ì˜ ë°ì´í„°ë¥¼ ì „ë¶€ ë®ì–´ì”Œì›€
 
 		fseek(wStream, 0, SEEK_SET);
 		fputs("Olleh", wStream);
@@ -44,7 +44,7 @@ void TextIO()
 		fputs("s", wStream);
 		
 		fclose(wStream);
-		//µ¿ÀûÇÒ´ç°ú ºñ½ÁÇÏ°Ô ½ºÆ®¸²À» ¿­¸é ´Ý¾Æ¾ßÇÔ
+		//ë™ì í• ë‹¹ê³¼ ë¹„ìŠ·í•˜ê²Œ ìŠ¤íŠ¸ë¦¼ì„ ì—´ë©´ ë‹«ì•„ì•¼í•¨
 	}
 	else
 	{

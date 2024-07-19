@@ -1,6 +1,6 @@
-#pragma once
+ï»¿#pragma once
 
 void Part01();
-//¸Ş´ºÆÇÀÇ ¸Ş´º
+//ë©”ë‰´íŒì˜ ë©”ë‰´
 
 void HelloWorld();

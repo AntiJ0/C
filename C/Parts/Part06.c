@@ -1,4 +1,4 @@
-#include <stdafx.h>
+ï»¿#include <stdafx.h>
 #include "Part06.h"
 
 void Part06()
@@ -14,25 +14,25 @@ void Example1()
 	int index = 0;
 
 	while (temp)
-		printf("½ÇÇà ºÒ°¡´É\n");
+		printf("ì‹¤í–‰ ë¶ˆê°€ëŠ¥\n");
 
 	do
 	{
 		temp = true;
-		printf("10À» ÀÔ·ÂÇÏ¸é ¹İº¹¹®À» Å»ÃâÇÕ´Ï´Ù. \n¼ıÀÚ ÀÔ·Â : ");
+		printf("10ì„ ì…ë ¥í•˜ë©´ ë°˜ë³µë¬¸ì„ íƒˆì¶œí•©ë‹ˆë‹¤. \nìˆ«ì ì…ë ¥ : ");
 		scanf("%d", &breakPoint);
 
 		if (breakPoint == 10)
 		{
 			temp = false;
-			printf("Å»Ãâ ¼º°ø");
+			printf("íƒˆì¶œ ì„±ê³µ");
 		}
 		else
 		{
 			if (index < 10)
 				++index;
 
-			printf("10À» ÀÔ·ÂÇÏ¼¼¿ä");
+			printf("10ì„ ì…ë ¥í•˜ì„¸ìš”");
 			for (int i = 0; i < index; ++i)
 				printf("!");
 
@@ -47,15 +47,15 @@ void Example2()
 
 	do
 	{
-		printf("°úÁ¦¸¦ ¼±ÅÃÇÏ¼¼¿ä.\n\n");
+		printf("ê³¼ì œë¥¼ ì„ íƒí•˜ì„¸ìš”.\n\n");
 
-		printf("1. »õº® 2½Ã¿¡ Àß ¼ö ÀÖ´Â °úÁ¦\n");
-		printf("2. »õº® 4½Ã¿¡ Àß ¼ö ÀÖ´Â °úÁ¦\n");
-		printf("3. ¾ÆÄ§¿¡ ¶ß´Â ÇØ¸¦ º¼ ¼ö ÀÖ´Â °úÁ¦\n");
-		printf("4. 24½Ã°£ ÇÒ ¼ö ÀÖ´Â °úÁ¦\n");
-		printf("5. °úÁ¦ ¾øÀ½\n");
+		printf("1. ìƒˆë²½ 2ì‹œì— ì˜ ìˆ˜ ìˆëŠ” ê³¼ì œ\n");
+		printf("2. ìƒˆë²½ 4ì‹œì— ì˜ ìˆ˜ ìˆëŠ” ê³¼ì œ\n");
+		printf("3. ì•„ì¹¨ì— ëœ¨ëŠ” í•´ë¥¼ ë³¼ ìˆ˜ ìˆëŠ” ê³¼ì œ\n");
+		printf("4. 24ì‹œê°„ í•  ìˆ˜ ìˆëŠ” ê³¼ì œ\n");
+		printf("5. ê³¼ì œ ì—†ìŒ\n");
 
-		printf("\n¹øÈ£ ¼±ÅÃ : ");
+		printf("\në²ˆí˜¸ ì„ íƒ : ");
 		scanf("%d", &selection);
 
 		printf("\n");
@@ -64,16 +64,16 @@ void Example2()
 	switch (selection)
 	{
 	case 1:
-		printf("»õº® 2½Ã Á¢¼ö ¿Ï·á!\n");
+		printf("ìƒˆë²½ 2ì‹œ ì ‘ìˆ˜ ì™„ë£Œ!\n");
 		break;
 	case 2:
-		printf("»õº® 4½Ã Á¢¼ö ¿Ï·á!\n");
+		printf("ìƒˆë²½ 4ì‹œ ì ‘ìˆ˜ ì™„ë£Œ!\n");
 		break;
 	case 3:
-		printf("¹ã»ù Á¢¼ö ¿Ï·á!\n");
+		printf("ë°¤ìƒ˜ ì ‘ìˆ˜ ì™„ë£Œ!\n");
 		break;
 	case 4:
-		printf("24½Ã°£ Á¢¼ö ¿Ï·á!\n");
+		printf("24ì‹œê°„ ì ‘ìˆ˜ ì™„ë£Œ!\n");
 		break;
 	}
 }

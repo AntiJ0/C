@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 void Part11();
 
@@ -7,7 +7,7 @@ float GetAvr(int a, int b);
 void FuncA();
 void FuncB();
 /*
-ÇÔ¼öÆ÷ÀÎÅÍ¹İÈ¯Çü (*ÇÔ¼öÀÌ¸§(ÇÔ¼öÀÇ¸Å°³º¯¼ö))(ÇÔ¼öÆ÷ÀÎÅÍÀÇ¸Å°³º¯¼ö);
+í•¨ìˆ˜í¬ì¸í„°ë°˜í™˜í˜• (*í•¨ìˆ˜ì´ë¦„(í•¨ìˆ˜ì˜ë§¤ê°œë³€ìˆ˜))(í•¨ìˆ˜í¬ì¸í„°ì˜ë§¤ê°œë³€ìˆ˜);
 */
 //void (*FuncC(int funcType))();
 typedef void (*FuncPtr_void_void)();

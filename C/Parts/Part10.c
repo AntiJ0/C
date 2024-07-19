@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Part10.h"
 
 void Part10()
@@ -10,20 +10,20 @@ void Part10()
 
 void Pointer()
 {
-	//ÁÖ¼Ò°ªÀ» ÀúÀåÇÏ´Â º¯¼ö
+	//ì£¼ì†Œê°’ì„ ì €ì¥í•˜ëŠ” ë³€ìˆ˜
 	int intNum = 0;
 	float fltNum = 0.0f;
 	double dbNum = 0.0;
 
 	/*
-	Æ÷ÀÎÅÍ ¼±¾ğ ¹æ¹ı
-	ÀÚ·áÇü (*)Æ÷ÀÎÅÍ¿¬»êÀÚ Æ÷ÀÎÅÍÀÌ¸§
+	í¬ì¸í„° ì„ ì–¸ ë°©ë²•
+	ìë£Œí˜• (*)í¬ì¸í„°ì—°ì‚°ì í¬ì¸í„°ì´ë¦„
 
-	Æ÷ÀÎÅÍ : ÁÖ¼Ò°ªÀ» ÀúÀåÇÏ´Â º¯¼ö
+	í¬ì¸í„° : ì£¼ì†Œê°’ì„ ì €ì¥í•˜ëŠ” ë³€ìˆ˜
 
-	Æ÷ÀÎÅÍ(ÁÖ¼Ò°ª)ÀÇ Å©±â
-	x86(32bit) - 4¹ÙÀÌÆ®
-	x64(64bit) - 8¹ÙÀÌÆ®
+	í¬ì¸í„°(ì£¼ì†Œê°’)ì˜ í¬ê¸°
+	x86(32bit) - 4ë°”ì´íŠ¸
+	x64(64bit) - 8ë°”ì´íŠ¸
 
 	int intNum;
 
@@ -34,7 +34,7 @@ void Pointer()
 	float* fltPtr = &fltNum;
 	double* dbPtr = &dbNum;
 
-	printf("\n===== Æ÷ÀÎÅÍ Å©±â =====\n");
+	printf("\n===== í¬ì¸í„° í¬ê¸° =====\n");
 	printf("int* : %zd\n", sizeof(intPtr));
 	printf("float* : %zd\n", sizeof(fltPtr));
 	printf("double* : %zd\n", sizeof(dbPtr));
@@ -44,78 +44,78 @@ void Pointer()
 	intPtr = &intNum
 	*intPtr = 10;
 	*/
-	//°£Á¢ÂüÁ¶¿¬»êÀÚ
+	//ê°„ì ‘ì°¸ì¡°ì—°ì‚°ì
 	*intPtr = 10;
 	//intNum = 10
 	*fltPtr = 3.14f;
 
-	printf("===== Æ÷ÀÎÅÍ °£Á¢ ÂüÁ¶ °á°ú =====\n");
+	printf("===== í¬ì¸í„° ê°„ì ‘ ì°¸ì¡° ê²°ê³¼ =====\n");
 	printf("Int : %d, %p, Int* : %p, %d\n", intNum, &intNum, intPtr, *intPtr);
 	printf("Float : %f, %p, Int* : %p, %f\n", fltNum, &fltNum, fltPtr, *fltPtr);
 
 	void* ptr = &intNum;
 
-	//Çüº¯È¯ ÇÊ¿ä
+	//í˜•ë³€í™˜ í•„ìš”
 	*(int*)ptr = 20;
 
-	printf("===== Æ÷ÀÎÅÍ °£Á¢ ÂüÁ¶ °á°ú =====\n");
+	printf("===== í¬ì¸í„° ê°„ì ‘ ì°¸ì¡° ê²°ê³¼ =====\n");
 	printf("Int : %d, %p, Void* : %p, %d\n", intNum, &intNum, ptr, *(int*)ptr);
 
 	/*
-	ÇÔ¼ö È£Ãâ -> CallByValue
+	í•¨ìˆ˜ í˜¸ì¶œ -> CallByValue
 	*/
 
 	int num1 = 0;
 	int num2 = 0;
 
-	printf("\nÁ¤¼ö 2°³ ÀÔ·Â : ");
+	printf("\nì •ìˆ˜ 2ê°œ ì…ë ¥ : ");
 	scanf("%d %d", &num1, &num2);
 
-	printf("\n===== °ª ±³È¯ Àü =====\n");
-	printf("Áö¿ª º¯¼ö num1(%p) : %d, Áö¿ª º¯¼ö num2(%p) : %d\n", &num1, num1, &num2, num2);
+	printf("\n===== ê°’ êµí™˜ ì „ =====\n");
+	printf("ì§€ì—­ ë³€ìˆ˜ num1(%p) : %d, ì§€ì—­ ë³€ìˆ˜ num2(%p) : %d\n", &num1, num1, &num2, num2);
 	
-	printf("\n===== °ª ±³È¯Áß =====\n");
+	printf("\n===== ê°’ êµí™˜ì¤‘ =====\n");
 	SwapByPtr(&num1, &num2);
 
-	printf("\n===== °ª ±³È¯ ÈÄ =====\n");
-	printf("Áö¿ª º¯¼ö num1(%p) : %d, Áö¿ª º¯¼ö num2(%p) : %d\n", &num1, num1, &num2, num2);
+	printf("\n===== ê°’ êµí™˜ í›„ =====\n");
+	printf("ì§€ì—­ ë³€ìˆ˜ num1(%p) : %d, ì§€ì—­ ë³€ìˆ˜ num2(%p) : %d\n", &num1, num1, &num2, num2);
 
 	const int num = 20;
-	//º¯¼öÀÇ »ó¼öÈ­
+	//ë³€ìˆ˜ì˜ ìƒìˆ˜í™”
 	
-	const int* constPtr1 = &num1;//°£Á¢ Ã¢Á¶¸¦ ÅëÇÑ °ª Á¶Á¤ ºÒ°¡´É
-	int* const constPtr2 = &num2;//ÁÖ¼Ò°ª º¯°æ ºÒ°¡´É
+	const int* constPtr1 = &num1;//ê°„ì ‘ ì°½ì¡°ë¥¼ í†µí•œ ê°’ ì¡°ì • ë¶ˆê°€ëŠ¥
+	int* const constPtr2 = &num2;//ì£¼ì†Œê°’ ë³€ê²½ ë¶ˆê°€ëŠ¥
 	const int* const constPtr3 = &num1;
 
 	constPtr1 = &num2;
-	//constPtr1 = 10; ºÒ°¡´É
+	//constPtr1 = 10; ë¶ˆê°€ëŠ¥
 
 	//constPtr2 = 20;
-	//constPtr2 = &num1; ºÒ°¡´É
+	//constPtr2 = &num1; ë¶ˆê°€ëŠ¥
 
-	//µÑ ´Ù ºÒ°¡´É
+	//ë‘˜ ë‹¤ ë¶ˆê°€ëŠ¥
 }
 
 void SwapByValue(int a, int b)
 {
-	printf("¸Å°³ º¯¼ö a(%p) : %d, ¸Å°³ º¯¼ö b(%p) : %d\n", &a, a, &b, b);
+	printf("ë§¤ê°œ ë³€ìˆ˜ a(%p) : %d, ë§¤ê°œ ë³€ìˆ˜ b(%p) : %d\n", &a, a, &b, b);
 
 	int temp = a;
 	a = b;
 	b = temp;
 
-	printf("¸Å°³ º¯¼ö a(%p) : %d, ¸Å°³ º¯¼ö b(%p) : %d\n", &a, a, &b, b);
+	printf("ë§¤ê°œ ë³€ìˆ˜ a(%p) : %d, ë§¤ê°œ ë³€ìˆ˜ b(%p) : %d\n", &a, a, &b, b);
 }
 
 void SwapByPtr(int* a, int* b)
 {
-	printf("¸Å°³ º¯¼ö a(%p) : %d, ¸Å°³ º¯¼ö b(%p) : %d\n", a, *a, b, *b);
+	printf("ë§¤ê°œ ë³€ìˆ˜ a(%p) : %d, ë§¤ê°œ ë³€ìˆ˜ b(%p) : %d\n", a, *a, b, *b);
 
 	int temp = *a;
 	*a = *b;
 	*b = temp;
 
-	printf("¸Å°³ º¯¼ö a(%p) : %d, ¸Å°³ º¯¼ö b(%p) : %d\n", a, *a, b, *b);
+	printf("ë§¤ê°œ ë³€ìˆ˜ a(%p) : %d, ë§¤ê°œ ë³€ìˆ˜ b(%p) : %d\n", a, *a, b, *b);
 }
 
 void InitializeArray()
@@ -126,12 +126,12 @@ void InitializeArray()
 	const int len1 = sizeof(arr1) / sizeof(arr1[0]);
 	const int len2 = sizeof(arr2) / sizeof(arr2[0]);
 
-	printf("===== ¹è¿­ 1 ¿ø¼Ò (%lld) =====\n", sizeof(arr1));
+	printf("===== ë°°ì—´ 1 ì›ì†Œ (%lld) =====\n", sizeof(arr1));
 	for (int i = 0; i < len1; ++i)
 		printf("%d, ", *(arr1 + i));
 
 	int* const ptr1 = arr2;
-	printf("\n\n===== ¹è¿­ 2 ¿ø¼Ò (%lld) =====\n", sizeof(ptr1));
+	printf("\n\n===== ë°°ì—´ 2 ì›ì†Œ (%lld) =====\n", sizeof(ptr1));
 	for (int i = 0; i < len2; ++i)
 		printf("%d, ", ptr1[i]);
 
@@ -141,7 +141,7 @@ void InitializeArray()
 
 	InitArrayByPtr(arr3, len3);
 
-	printf("\n\n===== ¹è¿­ 3 ¿ø¼Ò (%lld) =====\n", sizeof(arr3));
+	printf("\n\n===== ë°°ì—´ 3 ì›ì†Œ (%lld) =====\n", sizeof(arr3));
 	for (int i = 0; i < len3; ++i)
 		printf("%d, ", arr3[i]);
 
@@ -164,7 +164,7 @@ void InitArrayByPtr(int* arr, int len)
 
 void PointerToPointer()
 {
-	//ÀÌÁß Æ÷ÀÎÅÍ
+	//ì´ì¤‘ í¬ì¸í„°
 	int num1 = 0;
 	int num2 = 0;
 
@@ -177,7 +177,7 @@ void PointerToPointer()
 	*ptrToPtr = &num2;
 	**ptrToPtr = 20;
 
-	printf("===== ÀÌÁß Æ÷ÀÎÅÍ °£Á¢ ÂüÁ¶ °á°ú =====\n");
+	printf("===== ì´ì¤‘ í¬ì¸í„° ê°„ì ‘ ì°¸ì¡° ê²°ê³¼ =====\n");
 	printf("num1 : %d, %p\n", num1, &num1);
 	printf("num2 : %d, %p\n", num2, &num2);
 	printf("int* : %p, %p int** : %p, %p\n", ptr, &ptr, ptrToPtr, &ptrToPtr);
@@ -185,12 +185,12 @@ void PointerToPointer()
 	int* ptr1 = &num1;
 	int* ptr2 = &num2;
 
-	printf("\n===== Æ÷ÀÎÅÍ ±³È¯ Àü =====\n");
+	printf("\n===== í¬ì¸í„° êµí™˜ ì „ =====\n");
 	printf("%p : %d, %p : %d\n", ptr1, *ptr1, ptr2, *ptr2);
 
 	SwapByPP(&ptr1, &ptr2);
 
-	printf("\n===== Æ÷ÀÎÅÍ ±³È¯ ÈÄ =====\n");
+	printf("\n===== í¬ì¸í„° êµí™˜ í›„ =====\n");
 	printf("%p : %d, %p : %d\n", ptr1, *ptr1, ptr2, *ptr2);
 }
 

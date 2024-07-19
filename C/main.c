@@ -1,11 +1,11 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Parts/PartList.h"
 
-//¸ÞÀÎÇÔ¼ö -> ÇÁ·Î±×·¥ÀÇ ÁøÀÔÁ¡(entry point)
-//½ÇÇà ½ÃÀÛ½Ã ¸ÞÀÎÇÔ¼ö·Î °¡Àå ¸ÕÀú ÁøÀÔ
-//Ä¿¹Ô Å×½ºÆ®
+//ë©”ì¸í•¨ìˆ˜ -> í”„ë¡œê·¸ëž¨ì˜ ì§„ìž…ì (entry point)
+//ì‹¤í–‰ ì‹œìž‘ì‹œ ë©”ì¸í•¨ìˆ˜ë¡œ ê°€ìž¥ ë¨¼ì € ì§„ìž…
+//ì»¤ë°‹ í…ŒìŠ¤íŠ¸
 
-//Àü¿ªº¯¼ö
+//ì „ì—­ë³€ìˆ˜
 int globalVal = 20;
 
 
@@ -25,6 +25,6 @@ int main()
 	//Part12();
 	//Part13();
 
-	//return -> ÇÔ¼ö¸¦ Á¾·á
-	return 0; //¼ýÀÚ 0 ÄÚµå¸¦ ¹ÝÈ¯ÇÏ°í ¸ÞÀÎÇÔ¼ö¸¦ Á¾·á(mainÇÔ¼öÀÇ Á¤»óÀû Á¾·á¸¦ ÀÇ¹Ì)
+	//return -> í•¨ìˆ˜ë¥¼ ì¢…ë£Œ
+	return 0; //ìˆ«ìž 0 ì½”ë“œë¥¼ ë°˜í™˜í•˜ê³  ë©”ì¸í•¨ìˆ˜ë¥¼ ì¢…ë£Œ(mainí•¨ìˆ˜ì˜ ì •ìƒì  ì¢…ë£Œë¥¼ ì˜ë¯¸)
 }

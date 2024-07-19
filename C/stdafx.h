@@ -1,11 +1,11 @@
-#pragma once
-//Áßº¹µÈ Çì´õ¸¦ Á¦¿ÜÇØÁÖ´Â ¿ªÇÒ
+ï»¿#pragma once
+//ì¤‘ë³µëœ í—¤ë”ë¥¼ ì œì™¸í•´ì£¼ëŠ” ì—­í• 
 
 #define _CRT_SECURE_NO_WARNINGS
 
-//¾ğ¾îÀÇ Ç¥ÁØ Çì´õ <>·Î Æ÷ÇÔ(´õ ÀÛÀº ¹üÀ§)
+//ì–¸ì–´ì˜ í‘œì¤€ í—¤ë” <>ë¡œ í¬í•¨(ë” ì‘ì€ ë²”ìœ„)
 #include <stdio.h>
-//stdio.h-> Standard Input Output(Ç¥ÁØÀÔÃâ·Â) Çì´õ
+//stdio.h-> Standard Input Output(í‘œì¤€ì…ì¶œë ¥) í—¤ë”
 #include <stdlib.h>
 #include <stdbool.h>
 #include <time.h>

@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include <limits.h>
 #include <float.h>
 #include"Part02.h"
@@ -11,62 +11,62 @@ void Part02()
 
 void DataSize()
 {
-	//ÄÄÇ»ÅÍ -> µ¥ÀÌÅÍ¸¦ ¿¬»êÇÏ°í ÀúÀåÇÏ´Â ÀåÄ¡
-	//¿¬»êÀåÄ¡
-	//Central Process Unit(CPU, Áß¾ÓÃ³¸®ÀåÄ¡)
-	//»ç¶÷ÀÇ ³ú, ¼Ò¼öÁ¤¿¹
-	//Graphics Process Unit(GPU, ±×·¡ÇÈÃ³¸®ÀåÄ¡)
-	//´Ü¼øÇÏÁö¸¸ ¼ö°¡ ¸¹À½
-	//ÀúÀåÀåÄ¡
-	//HDD, SSD0-º¸Á¶±â¾ïÀåÄ¡
-	//RAM, ROM(BIOS)-ÁÖ±â¾ïÀåÄ¡
+	//ì»´í“¨í„° -> ë°ì´í„°ë¥¼ ì—°ì‚°í•˜ê³  ì €ì¥í•˜ëŠ” ì¥ì¹˜
+	//ì—°ì‚°ì¥ì¹˜
+	//Central Process Unit(CPU, ì¤‘ì•™ì²˜ë¦¬ì¥ì¹˜)
+	//ì‚¬ëŒì˜ ë‡Œ, ì†Œìˆ˜ì •ì˜ˆ
+	//Graphics Process Unit(GPU, ê·¸ë˜í”½ì²˜ë¦¬ì¥ì¹˜)
+	//ë‹¨ìˆœí•˜ì§€ë§Œ ìˆ˜ê°€ ë§ìŒ
+	//ì €ì¥ì¥ì¹˜
+	//HDD, SSD0-ë³´ì¡°ê¸°ì–µì¥ì¹˜
+	//RAM, ROM(BIOS)-ì£¼ê¸°ì–µì¥ì¹˜
 	//Random Access Memory
-	//ÀÓÀÇÁ¢±Ù-¼øÂ÷Á¢±ÙÀÌ ¾Æ´Ñ Æ¯Á¤ÇÑ ÁÖ¼Ò·Î ¹Ù·Î Á¢±ÙÇÔ
-	//0(1) -> °¡Àå ºü¸¥ ¼Óµµ
-	//bit -> ÄÄÇ»ÅÍ°¡ ¿¬»êÇÒ ¼ö ÀÖ´Â °¡Àå ÀÛÀº ´ÜÀ§ - 0 ¶Ç´Â 1
-	//1 byte = 8 bit => °æ¿ìÀÇ ¼ö 2^8 = 256°¡Áö
+	//ì„ì˜ì ‘ê·¼-ìˆœì°¨ì ‘ê·¼ì´ ì•„ë‹Œ íŠ¹ì •í•œ ì£¼ì†Œë¡œ ë°”ë¡œ ì ‘ê·¼í•¨
+	//0(1) -> ê°€ì¥ ë¹ ë¥¸ ì†ë„
+	//bit -> ì»´í“¨í„°ê°€ ì—°ì‚°í•  ìˆ˜ ìˆëŠ” ê°€ì¥ ì‘ì€ ë‹¨ìœ„ - 0 ë˜ëŠ” 1
+	//1 byte = 8 bit => ê²½ìš°ì˜ ìˆ˜ 2^8 = 256ê°€ì§€
 	//int -> 4byte 
 	char ch = 'A';
 	//1 byte
-	//Á¤¼ö or ¹®ÀÚ 1°³¸¦ ´ãÀ»¶§ »ç¿ë
-	//ÄÄÇ»ÅÍ´Â 'A'¸¦ ¼ıÀÚ·Î ÀÎ½Ä
+	//ì •ìˆ˜ or ë¬¸ì 1ê°œë¥¼ ë‹´ì„ë•Œ ì‚¬ìš©
+	//ì»´í“¨í„°ëŠ” 'A'ë¥¼ ìˆ«ìë¡œ ì¸ì‹
 	short shortNum = 10;
 	int integerNum = 20;
 	long longNum = 30;
 	long long longLongNum = 40;
 
-	float floatingNum = 0.1f;//f = float, f°¡ ºÙÁö¾ÊÀº ½Ç¼ö´Â double·Î Ã³¸®µÊ
+	float floatingNum = 0.1f;//f = float, fê°€ ë¶™ì§€ì•Šì€ ì‹¤ìˆ˜ëŠ” doubleë¡œ ì²˜ë¦¬ë¨
 	double doubleNum = 10.2;
 
 	long double longDoubleNum = 10.3;
-	//ÇöÀç »ç¿ëÁßÀÎ ÄÄÆÄÀÏ => vc++ => long double 8byte·Î Ã³¸®
-	//Ç¥ÁØÀ» µû¸£´Â ÄÄÆÄÀÏ => gcc, g++ => long double 16byte·Î Ã³¸®
+	//í˜„ì¬ ì‚¬ìš©ì¤‘ì¸ ì»´íŒŒì¼ => vc++ => long double 8byteë¡œ ì²˜ë¦¬
+	//í‘œì¤€ì„ ë”°ë¥´ëŠ” ì»´íŒŒì¼ => gcc, g++ => long double 16byteë¡œ ì²˜ë¦¬
 
-	printf("===== ¹®ÀÚÇü Ãâ·Â =====\n");
+	printf("===== ë¬¸ìí˜• ì¶œë ¥ =====\n");
 	printf("Char (%llu) : %c\n\n", sizeof(ch), ch);
 
-	printf("===== Á¤¼öÇü Ãâ·Â =====\n");
+	printf("===== ì •ìˆ˜í˜• ì¶œë ¥ =====\n");
 	printf("short (%llu) : %10d\n", sizeof(shortNum), shortNum);
 	printf("int (%llu) : %05d\n", sizeof(integerNum), integerNum);
 	printf("long (%llu) : %ld\n", sizeof(longNum), longNum);
 	printf("long long (%llu) : %lld\n\n", sizeof(longLongNum), longLongNum);
 	//llu -> long long unsigned
-	//unsigned -> ºÎÈ£°¡ ¾ø´Â(À½¼ö¸¦ Ç¥ÇöÇÏÁö ¾Ê´Â)
-	//unsigned¸¦ ºÙÀÌÁö ¾ÊÀ½ -> signed -> ºÎÈ£°¡ ÀÖ´Â
-	//sizeof(ch) -> sizeof ¿¬»êÀÚ () ¾ÈÀÇ µ¥ÀÌÅÍ(ÀÚ·á) È¤Àº ÀÚ·áÇüÀÇ Å©±â¸¦ ³ªÅ¸³½´Ù
+	//unsigned -> ë¶€í˜¸ê°€ ì—†ëŠ”(ìŒìˆ˜ë¥¼ í‘œí˜„í•˜ì§€ ì•ŠëŠ”)
+	//unsignedë¥¼ ë¶™ì´ì§€ ì•ŠìŒ -> signed -> ë¶€í˜¸ê°€ ìˆëŠ”
+	//sizeof(ch) -> sizeof ì—°ì‚°ì () ì•ˆì˜ ë°ì´í„°(ìë£Œ) í˜¹ì€ ìë£Œí˜•ì˜ í¬ê¸°ë¥¼ ë‚˜íƒ€ë‚¸ë‹¤
 
-	printf("===== ½Ç¼öÇü Ãâ·Â =====\n");
-	printf("Float (%llu) : %.15f\n", sizeof(floatingNum), floatingNum);//f¾Õ .9ºÙÀÌ¸é ¼Ò¼öÁ¡ 9ÀÚ¸®±îÁö Ç¥Çö
+	printf("===== ì‹¤ìˆ˜í˜• ì¶œë ¥ =====\n");
+	printf("Float (%llu) : %.15f\n", sizeof(floatingNum), floatingNum);//fì• .9ë¶™ì´ë©´ ì†Œìˆ˜ì  9ìë¦¬ê¹Œì§€ í‘œí˜„
 	printf("Double (%llu) : %lf\n", sizeof(doubleNum), doubleNum);
 	printf("Long Double (%llu) : %f\n", sizeof(longDoubleNum), longDoubleNum);
 
-	//ºÎµ¿¼Ò¼öÁ¡
-	//ºÎµ¿(floating ¶°´Ù´Ï´Â)
-	//IEEE754¿¡¼­ ÄÄÇ»ÅÍ -> ½Ç¼ö¸¦ ¾î¶»°Ô ÀúÀåÇÒ °ÍÀÎÁö¸¦ ÁöÁ¤
-	//°íÁ¤¼Ò¼öÁ¡
-	//16bit Á¤¼öºÎ 16bit ¼Ò¼öºÎ
-	//¼Ò¼öÁ¡ÀÌ ±ä ¼ö Ç¥Çö Á¤È®µµ ³·À½
-	//ºÎµ¿¼Ò¼öÁ¡ -> ÃÖ»óÀ§ºñÆ®(ºÎÈ£)+-[1bit] Áö¼ö(n)[8bit] °¡¼ö(m)[23bit]
+	//ë¶€ë™ì†Œìˆ˜ì 
+	//ë¶€ë™(floating ë– ë‹¤ë‹ˆëŠ”)
+	//IEEE754ì—ì„œ ì»´í“¨í„° -> ì‹¤ìˆ˜ë¥¼ ì–´ë–»ê²Œ ì €ì¥í•  ê²ƒì¸ì§€ë¥¼ ì§€ì •
+	//ê³ ì •ì†Œìˆ˜ì 
+	//16bit ì •ìˆ˜ë¶€ 16bit ì†Œìˆ˜ë¶€
+	//ì†Œìˆ˜ì ì´ ê¸´ ìˆ˜ í‘œí˜„ ì •í™•ë„ ë‚®ìŒ
+	//ë¶€ë™ì†Œìˆ˜ì  -> ìµœìƒìœ„ë¹„íŠ¸(ë¶€í˜¸)+-[1bit] ì§€ìˆ˜(n)[8bit] ê°€ìˆ˜(m)[23bit]
 	//+- m * 2^n
 	/*
 	22.22
@@ -107,9 +107,9 @@ void DataSize()
 
 	IEEE
 	Round-up
-	0(ºÎÈ£) 10011001100110011001100(°¡¼ö) 2^-4(Áö¼ö)
+	0(ë¶€í˜¸) 10011001100110011001100(ê°€ìˆ˜) 2^-4(ì§€ìˆ˜)
 	0.1f
-	0(ºÎÈ£) 01111011(Áö¼ö) 10011001100110011001101(°¡¼ö)
+	0(ë¶€í˜¸) 01111011(ì§€ìˆ˜) 10011001100110011001101(ê°€ìˆ˜)
 	1.10011001100110011001101 * 2^-4
 	= 0.000110011001100110011001101
 	= 0.0625 + 0.03125 + ..... = 0.10000001490116119384765625
@@ -118,21 +118,21 @@ void DataSize()
 
 void DataRange()
 {
-	printf("charÀÇ ¹üÀ§ : %d ~ %d\n", SCHAR_MIN, SCHAR_MAX);
-	printf("unsigned charÀÇ ¹üÀ§ : %u ~ %u\n\n", 0U, UCHAR_MAX);
+	printf("charì˜ ë²”ìœ„ : %d ~ %d\n", SCHAR_MIN, SCHAR_MAX);
+	printf("unsigned charì˜ ë²”ìœ„ : %u ~ %u\n\n", 0U, UCHAR_MAX);
 
-	printf("shortÀÇ ¹üÀ§ : %d ~ %d\n", SHRT_MIN, SHRT_MAX);
-	printf("unsigned shortÀÇ ¹üÀ§ : %u ~ %u\n\n", 0U, USHRT_MAX);
+	printf("shortì˜ ë²”ìœ„ : %d ~ %d\n", SHRT_MIN, SHRT_MAX);
+	printf("unsigned shortì˜ ë²”ìœ„ : %u ~ %u\n\n", 0U, USHRT_MAX);
 
-	printf("intÀÇ ¹üÀ§ : %d ~ %d\n", INT_MIN, INT_MAX);
-	printf("unsigned intÀÇ ¹üÀ§ : %u ~ %u\n\n", 0U, UINT_MAX);
+	printf("intì˜ ë²”ìœ„ : %d ~ %d\n", INT_MIN, INT_MAX);
+	printf("unsigned intì˜ ë²”ìœ„ : %u ~ %u\n\n", 0U, UINT_MAX);
 
-	printf("longÀÇ ¹üÀ§ : %ld ~ %ld\n", LONG_MIN, LONG_MAX);
-	printf("unsigned longÀÇ ¹üÀ§ : %lu ~ %lu\n\n", 0U, ULONG_MAX);
+	printf("longì˜ ë²”ìœ„ : %ld ~ %ld\n", LONG_MIN, LONG_MAX);
+	printf("unsigned longì˜ ë²”ìœ„ : %lu ~ %lu\n\n", 0U, ULONG_MAX);
 
-	printf("long longÀÇ ¹üÀ§ : %lld ~ %lld\n", LLONG_MIN, LLONG_MAX);
-	printf("unsigned long longÀÇ ¹üÀ§ : %llu ~ %llu\n\n", 0U, ULLONG_MAX);
+	printf("long longì˜ ë²”ìœ„ : %lld ~ %lld\n", LLONG_MIN, LLONG_MAX);
+	printf("unsigned long longì˜ ë²”ìœ„ : %llu ~ %llu\n\n", 0U, ULLONG_MAX);
 
-	printf("floatÀÇ ¹üÀ§ : %f ~ %f ~ %f\n\n", -FLT_MAX, FLT_MIN, FLT_MAX);
-	printf("doubleÀÇ ¹üÀ§ : %lf ~ %lf ~ %lf\n", -DBL_MAX, DBL_MIN, DBL_MAX);
+	printf("floatì˜ ë²”ìœ„ : %f ~ %f ~ %f\n\n", -FLT_MAX, FLT_MIN, FLT_MAX);
+	printf("doubleì˜ ë²”ìœ„ : %lf ~ %lf ~ %lf\n", -DBL_MAX, DBL_MIN, DBL_MAX);
 }

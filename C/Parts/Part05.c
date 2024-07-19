@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Part05.h"
 
 void Part05()
@@ -11,28 +11,28 @@ void Part05()
 void While()
 {
 	/*
-	¹Ýº¹¹®
-	Æ¯Á¤ Á¶°ÇÀÌ ¸¸Á·ÇÒ µ¿¾È¸¸ Æ¯Á¤ µ¿ÀÛÀ» ¹Ýº¹ÇÏ´Â Á¦¾î¹®
-	°ÔÀÓ -> ¹«ÇÑ·çÇÁ ±¸Á¶
-	ÇÃ·¹ÀÌ¾î°¡ °¡¸¸È÷ ÀÖÀ»¶§ - idle ÀÚ¼¼
+	ë°˜ë³µë¬¸
+	íŠ¹ì • ì¡°ê±´ì´ ë§Œì¡±í•  ë™ì•ˆë§Œ íŠ¹ì • ë™ìž‘ì„ ë°˜ë³µí•˜ëŠ” ì œì–´ë¬¸
+	ê²Œìž„ -> ë¬´í•œë£¨í”„ êµ¬ì¡°
+	í”Œë ˆì´ì–´ê°€ ê°€ë§Œížˆ ìžˆì„ë•Œ - idle ìžì„¸
 	Update
-	Rendering - È­¸éÀ» Áö¿ì°í ´Ù½Ã ±×¸®´Â °úÁ¤
+	Rendering - í™”ë©´ì„ ì§€ìš°ê³  ë‹¤ì‹œ ê·¸ë¦¬ëŠ” ê³¼ì •
 
-	¹Ýº¹¹®ÀÇ ±âº»ÀûÀÎ ±¸Á¶
+	ë°˜ë³µë¬¸ì˜ ê¸°ë³¸ì ì¸ êµ¬ì¡°
 	while, do while, for
 
-	while (Á¶°Ç½Ä)
+	while (ì¡°ê±´ì‹)
 	{
-		Á¶°Ç½ÄÀÌ ¸¸Á·ÇÒ µ¿¾È ¹Ýº¹ÇÒ ¸í·É¹®1;
-		Á¶°Ç½ÄÀÌ ¸¸Á·ÇÒ µ¿¾È ¹Ýº¹ÇÒ ¸í·É¹®2;
-		Á¶°Ç½ÄÀÌ ¸¸Á·ÇÒ µ¿¾È ¹Ýº¹ÇÒ ¸í·É¹®3;
-		Á¶°Ç½ÄÀÌ ¸¸Á·ÇÒ µ¿¾È ¹Ýº¹ÇÒ ¸í·É¹®4;
+		ì¡°ê±´ì‹ì´ ë§Œì¡±í•  ë™ì•ˆ ë°˜ë³µí•  ëª…ë ¹ë¬¸1;
+		ì¡°ê±´ì‹ì´ ë§Œì¡±í•  ë™ì•ˆ ë°˜ë³µí•  ëª…ë ¹ë¬¸2;
+		ì¡°ê±´ì‹ì´ ë§Œì¡±í•  ë™ì•ˆ ë°˜ë³µí•  ëª…ë ¹ë¬¸3;
+		ì¡°ê±´ì‹ì´ ë§Œì¡±í•  ë™ì•ˆ ë°˜ë³µí•  ëª…ë ¹ë¬¸4;
 	}
 	*/
 
 	int i = 0, times = 0;
 
-	printf("¹Ýº¹ È½¼ö ÀÔ·Â : ");
+	printf("ë°˜ë³µ íšŸìˆ˜ ìž…ë ¥ : ");
 	scanf("%d", &times);
 
 	while (i < times)
@@ -45,7 +45,7 @@ void DoWhile()
 {
 	int i = 0, times = 0;
 
-	printf("¹Ýº¹ È½¼ö ÀÔ·Â : ");
+	printf("ë°˜ë³µ íšŸìˆ˜ ìž…ë ¥ : ");
 	scanf("%d", &times);
 
 	do
@@ -58,23 +58,23 @@ void For()
 {
 	int times = 0;
 
-	printf("¹Ýº¹ È½¼ö ÀÔ·Â : ");
+	printf("ë°˜ë³µ íšŸìˆ˜ ìž…ë ¥ : ");
 	scanf("%d", &times);
 
 	/*
-	for (ÃÊ±âÀý; Á¶°ÇÀý; ¹Ýº¹Àý)
+	for (ì´ˆê¸°ì ˆ; ì¡°ê±´ì ˆ; ë°˜ë³µì ˆ)
 	{
 	
 	}
 
-	ÃÊ±âÀý - for¹®¿¡ Ã³À½ µé¾î¿Ã ¶§ ½ÇÇàÇÒ ±¸¹®
-	¹Ýº¹Àý -	¹Ýº¹ÀÌ µÉ ¶§¸¶´Ù ½ÇÇàÇÒ ±¸¹®
+	ì´ˆê¸°ì ˆ - forë¬¸ì— ì²˜ìŒ ë“¤ì–´ì˜¬ ë•Œ ì‹¤í–‰í•  êµ¬ë¬¸
+	ë°˜ë³µì ˆ -	ë°˜ë³µì´ ë  ë•Œë§ˆë‹¤ ì‹¤í–‰í•  êµ¬ë¬¸
 	*/
 
 	for (int i = 0; i < times; ++i)
 	{
 		//if (true)
-			//break; ¹«Á¶°ÇÁ¦¾î¹®, °¡Àå °¡±î¿î ¹Ýº¹¹®ÀÌ³ª switch¹®À» Å»Ãâ
+			//break; ë¬´ì¡°ê±´ì œì–´ë¬¸, ê°€ìž¥ ê°€ê¹Œìš´ ë°˜ë³µë¬¸ì´ë‚˜ switchë¬¸ì„ íƒˆì¶œ
 		if ((i + 1) % 2 == 0) continue;
 
 		printf("%d, ", i + 1);

@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Part11.h"
 
 void Part11()
@@ -10,17 +10,17 @@ void Part11()
 void FunctionPointer()
 {
 	/*
-	ÇÔ¼öÆ÷ÀÎÅÍÀÇ ¼±¾ğ
-	¹İÈ¯Çü (*ÇÔ¼öÆ÷ÀÎÅÍ ÀÌ¸§)(¸Å°³º¯¼ö)
+	í•¨ìˆ˜í¬ì¸í„°ì˜ ì„ ì–¸
+	ë°˜í™˜í˜• (*í•¨ìˆ˜í¬ì¸í„° ì´ë¦„)(ë§¤ê°œë³€ìˆ˜)
 	*/
 
 	int num1 = 0, num2 = 0;
 
-	printf("Á¤¼ö 2°³ ÀÔ·Â : ");
+	printf("ì •ìˆ˜ 2ê°œ ì…ë ¥ : ");
 	scanf("%d %d", &num1, &num2);
 
 	float (*fltFuncPtr)(int, int) = &GetAvr;
-	printf("\nÆò±Õ : %f\n\n", fltFuncPtr(num1, num2));
+	printf("\ní‰ê·  : %f\n\n", fltFuncPtr(num1, num2));
 
 	void (*funcPtr)() = &FuncA;
 	funcPtr();
@@ -30,7 +30,7 @@ void FunctionPointer()
 
 	int funcType = -1;
 
-	printf("\nÇÔ¼ö Å¸ÀÔ 0 ¶Ç´Â 1 ÀÔ·Â : ");
+	printf("\ní•¨ìˆ˜ íƒ€ì… 0 ë˜ëŠ” 1 ì…ë ¥ : ");
 	scanf("%d", &funcType);
 
 	funcPtr = FuncC(funcType);
@@ -44,12 +44,12 @@ float GetAvr(int a, int b)
 
 void FuncA()
 {
-	printf("FuncA È£Ãâ!\n");
+	printf("FuncA í˜¸ì¶œ!\n");
 }
 
 void FuncB()
 {
-	printf("FuncB È£Ãâ!\n");
+	printf("FuncB í˜¸ì¶œ!\n");
 }
 
 //void(*FuncC(int funcType))()
@@ -76,16 +76,16 @@ void FunctionPointerExample()
 	for (int i = 0; i < len; ++i)
 		arr[i] = rand() % 100 + 1;
 
-	printf("===== Á¤·Ä Àü ===== \n");
+	printf("===== ì •ë ¬ ì „ ===== \n");
 	for (int i = 0; i < len; ++i)
 		printf("%d ", arr[i]);
 
-	printf("\n\n===== ¿À¸§Â÷¼ø Á¤·Ä ÈÄ ===== \n");
+	printf("\n\n===== ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ í›„ ===== \n");
 	SortArray(arr, len, &CompareByAscending);
 	for (int i = 0; i < len; ++i)
 		printf("%d ", arr[i]);
 
-	printf("\n\n===== ³»¸²Â÷¼ø Á¤·Ä ÈÄ ===== \n");
+	printf("\n\n===== ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬ í›„ ===== \n");
 	SortArray(arr, len, &CompareByDescending);
 	for (int i = 0; i < len; ++i)
 		printf("%d ", arr[i]);

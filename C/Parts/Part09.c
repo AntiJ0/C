@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Part09.h"
 
 void Part09()
@@ -10,7 +10,7 @@ void Part09()
 
 void Structure()
 {
-    printf("Test ±¸Á¶Ã¼ Å©±â : %lld\n", sizeof(struct Test));
+    printf("Test êµ¬ì¡°ì²´ í¬ê¸° : %lld\n", sizeof(struct Test));
 
     Player player1;
     player1.id = 1;
@@ -20,7 +20,7 @@ void Structure()
 
     Player player2 = { 2, 2, 25, 1 };
 
-    printf("\n===== °¢ ÇÃ·¹ÀÌ¾î ÃÊ±â Á¤º¸ =====\n");
+    printf("\n===== ê° í”Œë ˆì´ì–´ ì´ˆê¸° ì •ë³´ =====\n");
     PrintPlayerInfo(player1);
     PrintPlayerInfo(player2);
 
@@ -34,44 +34,44 @@ void Structure()
 
     const int numPlayers = sizeof(players) / sizeof(players[0]);
 
-    printf("\n===== °¢ ÇÃ·¹ÀÌ¾î ÃÊ±â Á¤º¸(¹è¿­) =====\n");
+    printf("\n===== ê° í”Œë ˆì´ì–´ ì´ˆê¸° ì •ë³´(ë°°ì—´) =====\n");
     for (int i = 0; i < numPlayers; ++i)
         PrintPlayerInfo(players[i]);
 
     //while
-    //LevelUpÇÔ¼ö¸¦ »ç¿ëÇØ¼­ ·¹º§¾÷ ½ÃÅ³ °Í
-    printf("\n===== LevelUp °á°ú =====\n");
+    //LevelUpí•¨ìˆ˜ë¥¼ ì‚¬ìš©í•´ì„œ ë ˆë²¨ì—… ì‹œí‚¬ ê²ƒ
+    printf("\n===== LevelUp ê²°ê³¼ =====\n");
     for (int i = 0; i < numPlayers; ++i)
         PrintPlayerInfo(players[i]);
 }
 
 void PrintPlayerInfo(Player player)
 {
-    printf("ÇÃ·¹ÀÌ¾î %d Á¤º¸ [ Level : %d, HP : %d, ATK : %d ]\n", player.id, player.level, player.hp, player.atk);
+    printf("í”Œë ˆì´ì–´ %d ì •ë³´ [ Level : %d, HP : %d, ATK : %d ]\n", player.id, player.level, player.hp, player.atk);
 }
 
 void Union()
 {
-    printf("°ø¿ëÃ¼ Å©±â : %zd\n", sizeof(Data));
+    printf("ê³µìš©ì²´ í¬ê¸° : %zd\n", sizeof(Data));
 
     Data data = { 0 };
     data.intNum = 123456789;
 
-    printf("\n===== Int ÇÒ´ç °á°ú =====\n");
+    printf("\n===== Int í• ë‹¹ ê²°ê³¼ =====\n");
     printf("Int : %d\n", data.intNum);
     printf("float : %f\n", data.fltNum);
     printf("double : %lf\n", data.dbNum);
 
     data.fltNum = 3.14f;
 
-    printf("\n===== Float ÇÒ´ç °á°ú =====\n");
+    printf("\n===== Float í• ë‹¹ ê²°ê³¼ =====\n");
     printf("Int : %d\n", data.intNum);
     printf("float : %f\n", data.fltNum);
     printf("double : %lf\n", data.dbNum);
 
     data.dbNum = 3.141592;
 
-    printf("\n===== Double ÇÒ´ç °á°ú =====\n");
+    printf("\n===== Double í• ë‹¹ ê²°ê³¼ =====\n");
     printf("Int : %d\n", data.intNum);
     printf("float : %f\n", data.fltNum);
     printf("double : %lf\n", data.dbNum);
@@ -83,14 +83,14 @@ void Enumeration()
     Status status = STATUS_NONE;
     Motion motion = MOTION_NONE;
 
-    printf("===== ¿­°ÅÇü »ó¼ö =====\n");
+    printf("===== ì—´ê±°í˜• ìƒìˆ˜ =====\n");
     printf("Gold : %d\n", ITEM_GOLD);
     printf("Weapon : %d\n", ITEM_WEAPON);
     printf("Armor : %d\n", ITEM_ARMOR);
 
     ItemType itemType = ITEM_WEAPON;
 
-    printf("\n===== ¿­°ÅÇü »ó¼ö =====\n");
+    printf("\n===== ì—´ê±°í˜• ìƒìˆ˜ =====\n");
     printf("ItemType is Gold : %s\n", itemType == ITEM_GOLD ? "True" : "False");
     printf("ItemType is Weapon : %s\n", itemType == ITEM_WEAPON ? "True" : "False");
     printf("ItemType is Armor : %s\n", itemType == ITEM_ARMOR ? "True" : "False");
@@ -104,8 +104,8 @@ void Enumeration()
         do
         {
             system("cls");
-            printf("===== ¹«±â ±³Ã¼ ÇÁ·Î±×·¥ ===== \n\n");
-            printf("1. °Ë 2. È° 3. ÃÑ 4. ³ª°¡±â \n\n¸Ş´º ÀÔ·Â : ");
+            printf("===== ë¬´ê¸° êµì²´ í”„ë¡œê·¸ë¨ ===== \n\n");
+            printf("1. ê²€ 2. í™œ 3. ì´ 4. ë‚˜ê°€ê¸° \n\në©”ë‰´ ì…ë ¥ : ");
             scanf("%d", &weaponType);
             --weaponType;
             printf("\n");
@@ -113,19 +113,19 @@ void Enumeration()
             switch (weaponType)
             {
             case WEAPON_SWORD:
-                printf("ÇöÀç ¹«±â : °Ë");
+                printf("í˜„ì¬ ë¬´ê¸° : ê²€");
                 break;
             case WEAPON_BOW:
-                printf("ÇöÀç ¹«±â : È°");
+                printf("í˜„ì¬ ë¬´ê¸° : í™œ");
                 break;
             case WEAPON_GUN:
-                printf("ÇöÀç ¹«±â : ÃÑ");
+                printf("í˜„ì¬ ë¬´ê¸° : ì´");
                 break;
             case WEAPON_MAX_VALUE:
-                printf("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+                printf("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
                 break;
             default:
-                printf("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+                printf("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
                 break;
             }
 

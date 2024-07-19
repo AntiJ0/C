@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Part07.h"
 
 void Part07()
@@ -11,37 +11,37 @@ void Part07()
 void Array()
 {
 	/*
-	¹è¿­ -> µ¥ÀÌÅÍÀÇ ³ª¿­
-	¸Þ¸ð¸® »ó¿¡¼­ ¿¬¼ÓµÈ µ¿ÀÏÇÑ ÀÚ·áÇüÀ» °¡Áø µ¥ÀÌÅÍÀÇ ÁýÇÕ
+	ë°°ì—´ -> ë°ì´í„°ì˜ ë‚˜ì—´
+	ë©”ëª¨ë¦¬ ìƒì—ì„œ ì—°ì†ëœ ë™ì¼í•œ ìžë£Œí˜•ì„ ê°€ì§„ ë°ì´í„°ì˜ ì§‘í•©
 
-	º¯¼ö ¼±¾ð
-	ÀÚ·áÇü º¯¼öÀÌ¸§;
+	ë³€ìˆ˜ ì„ ì–¸
+	ìžë£Œí˜• ë³€ìˆ˜ì´ë¦„;
 
-	¹è¿­ ¼±¾ð
-	ÀÚ·áÇü ¹è¿­ÀÌ¸§[¹è¿­±æÀÌ];
+	ë°°ì—´ ì„ ì–¸
+	ìžë£Œí˜• ë°°ì—´ì´ë¦„[ë°°ì—´ê¸¸ì´];
 
 
 	*/
 
 	int arr[5];
-	//[] -> ÀÎµ¦½º ¿¬»êÀÚ
+	//[] -> ì¸ë±ìŠ¤ ì—°ì‚°ìž
 	arr[0] = 1;
 	arr[1] = 2;
 	arr[2] = 3;
 	arr[3] = 4;
 	arr[4] = 5;
 
-	printf("===== ¹è¿­ 1 ¿ø¼Ò =====\n");
+	printf("===== ë°°ì—´ 1 ì›ì†Œ =====\n");
 	printf("%d, %d, %d, %d, %d", arr[0], arr[1], arr[2], arr[3], arr[4]);
 
 	int arr2[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-	//¹è¿­ ±æÀÌ = ¹è¿­ ÀüÃ¼ Å©±â / ¿ø¼Ò 1°³ Å©±â
+	//ë°°ì—´ ê¸¸ì´ = ë°°ì—´ ì „ì²´ í¬ê¸° / ì›ì†Œ 1ê°œ í¬ê¸°
 
 	const int size2 = sizeof(arr2) / sizeof(arr2[0]);
-	//const -> º¯¼ö¸¦ »ó¼ö·Î ¹Ù²Þ
+	//const -> ë³€ìˆ˜ë¥¼ ìƒìˆ˜ë¡œ ë°”ê¿ˆ
 
-	printf("\n\n===== ¹è¿­ 2 ¿ø¼Ò =====\n");
+	printf("\n\n===== ë°°ì—´ 2 ì›ì†Œ =====\n");
 	for (int i = 0; i < size2; ++i)
 	{	
 		if(i >= size2 - 1)
@@ -51,26 +51,26 @@ void Array()
 	}
 
 	//NULL -> 0x00000000
-	//1900³â 1¿ù 1ÀÏ 0½Ã 0ºÐ 0ÃÊ 
+	//1900ë…„ 1ì›” 1ì¼ 0ì‹œ 0ë¶„ 0ì´ˆ 
 	srand((unsigned int)time(NULL));
 
 	int num = rand() % 100 + 1;
 
-	printf("\n\n===== ·£´ýÇÑ ¼ö 10°³ Ãâ·Â =====\n");
+	printf("\n\n===== ëžœë¤í•œ ìˆ˜ 10ê°œ ì¶œë ¥ =====\n");
 	for (int i = 0; i < 10; ++i)
 	{
 		printf("%d ", rand() % 100 + 1);
 	}
 
 	if (rand() % 100 + 1 <= 3)
-		printf("´çÃ·!\n");
+		printf("ë‹¹ì²¨!\n");
 	else
-		printf("²Î\n");
+		printf("ê½\n");
 
 	/*
-	rand -> 0 ~ 32767 ±îÁöÀÇ Á¤¼ö¸¦ ¹ÝÈ¯
-	seed(½Ãµå) -> ½Ãµå°ª
-	¸¶ÀÎÅ©·¡ÇÁÆ® -> ½Ãµå°ª(¸Ê)
+	rand -> 0 ~ 32767 ê¹Œì§€ì˜ ì •ìˆ˜ë¥¼ ë°˜í™˜
+	seed(ì‹œë“œ) -> ì‹œë“œê°’
+	ë§ˆì¸í¬ëž˜í”„íŠ¸ -> ì‹œë“œê°’(ë§µ)
 	*/
 
 	int arr3[100];
@@ -78,14 +78,14 @@ void Array()
 	for (int i = 0; i < 100; ++i)
 		arr3[i] = rand() % 100 + 1;
 
-	printf("\n\n===== ·£´ýÇÑ ¼ö 100°³ ¹è¿­¿¡ ´ã¾Æ¼­ Ãâ·Â =====\n");
+	printf("\n\n===== ëžœë¤í•œ ìˆ˜ 100ê°œ ë°°ì—´ì— ë‹´ì•„ì„œ ì¶œë ¥ =====\n");
 	for (int i = 0; i < 100; ++i)
 		printf("%d, ", arr3[i]);
 
-	//1. À¯ÀúÇÑÅ× 10°³ÀÇ ¼ö¸¦ ÀÔ·Â¹Þ¾Æ¼­ ÀÔ·Â¹ÞÀº ¼ø¼­´ë·Î Ãâ·ÂÇÏ±â(¹è¿­À» ½á¼­)
-	//2. ÁÖ»çÀ§ 100¹ø ±¼·Á¼­ 1 ~ 6±îÁö °¢°¢ ¸î¹ø ³ª¿Ô´ÂÁö °á°ú Ãâ·Â
+	//1. ìœ ì €í•œí…Œ 10ê°œì˜ ìˆ˜ë¥¼ ìž…ë ¥ë°›ì•„ì„œ ìž…ë ¥ë°›ì€ ìˆœì„œëŒ€ë¡œ ì¶œë ¥í•˜ê¸°(ë°°ì—´ì„ ì¨ì„œ)
+	//2. ì£¼ì‚¬ìœ„ 100ë²ˆ êµ´ë ¤ì„œ 1 ~ 6ê¹Œì§€ ê°ê° ëª‡ë²ˆ ë‚˜ì™”ëŠ”ì§€ ê²°ê³¼ ì¶œë ¥
 	int arr4[6] = { 0 };
-	//ÄÄÆÄÀÏ·¯°¡ ÀÔ·ÂµÈ °ªÀÌ ¾ø´Â º¯¼öµéÀÇ °ªÀ» ÀÚµ¿À¸·Î 0À¸·Î ÃÊ±âÈ­½ÃÅ´
+	//ì»´íŒŒì¼ëŸ¬ê°€ ìž…ë ¥ëœ ê°’ì´ ì—†ëŠ” ë³€ìˆ˜ë“¤ì˜ ê°’ì„ ìžë™ìœ¼ë¡œ 0ìœ¼ë¡œ ì´ˆê¸°í™”ì‹œí‚´
 
 	int arr5[] = { 1, 2, 3, 4, 5 };
 
@@ -96,8 +96,8 @@ void Array()
 void TwoDimensionalArray()
 {
 	/*
-	2Â÷¿ø ¹è¿­
-	Çà·Ä
+	2ì°¨ì› ë°°ì—´
+	í–‰ë ¬
 	4 x 4
 	[4][4]
 	*/
@@ -107,10 +107,10 @@ void TwoDimensionalArray()
 	matrix[1][0] = 3;
 	matrix[1][1] = 4;
 	//[y][x]
-	//row-major(Çà ¿ì¼±) c/c++/objective-c/pascal
-	//col-major(¿­ ¿ì¼±) fortran/s-plus/r
+	//row-major(í–‰ ìš°ì„ ) c/c++/objective-c/pascal
+	//col-major(ì—´ ìš°ì„ ) fortran/s-plus/r
 
-	printf("===== 2Â÷¿ø ¹è¿­ 1 ¿ø¼Ò =====\n");
+	printf("===== 2ì°¨ì› ë°°ì—´ 1 ì›ì†Œ =====\n");
 	printf("%d, %d\n%d, %d\n\n", matrix[0][0], matrix[0][1], matrix[1][0], matrix[1][1]);
 
 	int matrix2[2][2] =
@@ -122,7 +122,7 @@ void TwoDimensionalArray()
 	int row = sizeof(matrix2) / sizeof(matrix2[0]);
 	int col = sizeof(matrix2[0]) / sizeof(matrix2[0][0]);
 
-	printf("===== 2Â÷¿ø ¹è¿­ 2 ¿ø¼Ò =====\n");
+	printf("===== 2ì°¨ì› ë°°ì—´ 2 ì›ì†Œ =====\n");
 	for (int i = 0; i < row; ++i)
 	{
 		for (int j = 0; j < col; ++j)
@@ -138,7 +138,7 @@ void TwoDimensionalArray()
 
 	int matrix3[2][2] = { 1, 2, 3, 4 };
 
-	printf("===== 2Â÷¿ø ¹è¿­ 3 ¿ø¼Ò =====\n");
+	printf("===== 2ì°¨ì› ë°°ì—´ 3 ì›ì†Œ =====\n");
 	printf("%d, %d\n%d, %d\n\n", matrix3[0][0], matrix3[0][1], matrix3[1][0], matrix3[1][1]);
 
 	int matrix4[2][2] =
@@ -147,21 +147,21 @@ void TwoDimensionalArray()
 		{ 3 },
 	};
 
-	printf("===== 2Â÷¿ø ¹è¿­ 4 ¿ø¼Ò =====\n");
+	printf("===== 2ì°¨ì› ë°°ì—´ 4 ì›ì†Œ =====\n");
 	printf("%d, %d\n%d, %d\n\n", matrix4[0][0], matrix4[0][1], matrix4[1][0], matrix4[1][1]);
 
 	int matrix5[2][2] = { 1, 2 };
 
-	printf("===== 2Â÷¿ø ¹è¿­ 5 ¿ø¼Ò =====\n");
+	printf("===== 2ì°¨ì› ë°°ì—´ 5 ì›ì†Œ =====\n");
 	printf("%d, %d\n%d, %d\n\n", matrix5[0][0], matrix5[0][1], matrix5[1][0], matrix5[1][1]);
 
 	/*
-	ÇÐ»ý 1 - ±¹¿µ¼ö»ç°ú
-	ÇÐ»ý 2 - ±¹¿µ¼ö»ç°ú
-	ÇÐ»ý 3 - ±¹¿µ¼ö»ç°ú
-	ÇÐ»ý 4 - ±¹¿µ¼ö»ç°ú
+	í•™ìƒ 1 - êµ­ì˜ìˆ˜ì‚¬ê³¼
+	í•™ìƒ 2 - êµ­ì˜ìˆ˜ì‚¬ê³¼
+	í•™ìƒ 3 - êµ­ì˜ìˆ˜ì‚¬ê³¼
+	í•™ìƒ 4 - êµ­ì˜ìˆ˜ì‚¬ê³¼
 
-	Á¡¼ö Ãâ·Â ÀÌÈÄ ÃÑÁ¡, Æò±Õ Ãâ·Â
+	ì ìˆ˜ ì¶œë ¥ ì´í›„ ì´ì , í‰ê·  ì¶œë ¥
 	*/
 
 	int matrix6[][5] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -170,93 +170,93 @@ void TwoDimensionalArray()
 void String()
 {
 	/*
-	¹®ÀÚÀÇ ¹è¿­, ¹®ÀÚ¿­
+	ë¬¸ìžì˜ ë°°ì—´, ë¬¸ìžì—´
 
 	*/
 	char chs[5] = { 'A', 'B', 'C', 'D', 'E' };
 	char string[6] = { 'A', 'B', 'C', 'D', 'E', '\0' };
-	char string2[15] = "abcde";//Å«µûÀ½Ç¥¿¡ µé¾î°¡¸é ÀÚµ¿À¸·Î ³¡¿¡ NULL¹®ÀÚ°¡ Ãß°¡µÊ
+	char string2[15] = "abcde";//í°ë”°ìŒí‘œì— ë“¤ì–´ê°€ë©´ ìžë™ìœ¼ë¡œ ëì— NULLë¬¸ìžê°€ ì¶”ê°€ë¨
 
-	printf("===== ¹®ÀÚ¿­ =====\n");
-	printf("¹®ÀÚ¿­ 1 : %s\n", string);
-	printf("¹®ÀÚ¿­ 2 : %s\n", string2);
+	printf("===== ë¬¸ìžì—´ =====\n");
+	printf("ë¬¸ìžì—´ 1 : %s\n", string);
+	printf("ë¬¸ìžì—´ 2 : %s\n", string2);
 
 	strcpy(string, "Hello");
 	strcat(string2, "World");
-	//concatenate -> »ç½½Ã³·³ ÀÕ´Ù, ¿¬°áÇÏ´Ù
+	//concatenate -> ì‚¬ìŠ¬ì²˜ëŸ¼ ìž‡ë‹¤, ì—°ê²°í•˜ë‹¤
 
-	printf("\n===== ¹®ÀÚ¿­ ÇÔ¼ö °á°ú =====\n");
-	printf("¹®ÀÚ¿­ 1 (%zd) : %s\n", strlen(string), string);
-	printf("¹®ÀÚ¿­ 2 (%zd) : %s\n", strlen(string2), string2);
-	//strlen -> string length -> ¹®ÀÚ¿­ÀÇ ±æÀÌ
-	//¹®ÀÚ¿­ÀÇ Å©±â°¡ ¾Æ´Ñ ´Ü¼øÇÑ ¹®ÀÚÀÇ ±æÀÌ¸¦ ³ªÅ¸³¿ - sizeof¿Í ´Ù¸§
-	//%zd -> ºÎÈ£°¡ ¾ø´Â 8¹ÙÀÌÆ® Á¤¼öÇüÀ» ¹ÞÀ» ¶§ »ç¿ë
+	printf("\n===== ë¬¸ìžì—´ í•¨ìˆ˜ ê²°ê³¼ =====\n");
+	printf("ë¬¸ìžì—´ 1 (%zd) : %s\n", strlen(string), string);
+	printf("ë¬¸ìžì—´ 2 (%zd) : %s\n", strlen(string2), string2);
+	//strlen -> string length -> ë¬¸ìžì—´ì˜ ê¸¸ì´
+	//ë¬¸ìžì—´ì˜ í¬ê¸°ê°€ ì•„ë‹Œ ë‹¨ìˆœí•œ ë¬¸ìžì˜ ê¸¸ì´ë¥¼ ë‚˜íƒ€ëƒ„ - sizeofì™€ ë‹¤ë¦„
+	//%zd -> ë¶€í˜¸ê°€ ì—†ëŠ” 8ë°”ì´íŠ¸ ì •ìˆ˜í˜•ì„ ë°›ì„ ë•Œ ì‚¬ìš©
 
 	char str1[] = "aaabc";
 	char str2[] = "aaac";
 	//strcmp -> string compare
-	//µÎ ¹®ÀÚ¿­¿¡¼­ ¾Õ¿¡¼­ºÎÅÍ °°Àº ¹®ÀÚ±îÁö´Â ¹«½ÃÇÏ°í °¡Àå ¸ÕÀú ¼­·Î ´Ù¸¥ ¹®ÀÚ°¡ ³ª¿Â ½ÃÁ¡¿¡¼­ ÇØ´ç ¹®ÀÚÀÇ ¾Æ½ºÅ°ÄÚµå¸¦ ºñ±³ÇÔ
-	//¾ÕÀÌ ´õ ÀÛÀ¸¸é -1, °°À¸¸é 0, Å©¸é 1ÀÌ Ãâ·ÂµÊ
-	printf("¹®ÀÚ¿­ 1, 2 ºñ±³ : %d\n\n", strcmp(string, string2));
+	//ë‘ ë¬¸ìžì—´ì—ì„œ ì•žì—ì„œë¶€í„° ê°™ì€ ë¬¸ìžê¹Œì§€ëŠ” ë¬´ì‹œí•˜ê³  ê°€ìž¥ ë¨¼ì € ì„œë¡œ ë‹¤ë¥¸ ë¬¸ìžê°€ ë‚˜ì˜¨ ì‹œì ì—ì„œ í•´ë‹¹ ë¬¸ìžì˜ ì•„ìŠ¤í‚¤ì½”ë“œë¥¼ ë¹„êµí•¨
+	//ì•žì´ ë” ìž‘ìœ¼ë©´ -1, ê°™ìœ¼ë©´ 0, í¬ë©´ 1ì´ ì¶œë ¥ë¨
+	printf("ë¬¸ìžì—´ 1, 2 ë¹„êµ : %d\n\n", strcmp(string, string2));
 
 	//strchr -> string character
-	//Æ¯Á¤ÇÑ ¹®ÀÚ¸¦ Ã£°í ±× ¹®ÀÚÀÇ ÁÖ¼Ò°ªÀ» ¹ÝÈ¯ÇÏ´Â ÇÔ¼ö
-	//ÁÖ¼Ò°ªÀ» Ã£Áö ¸øÇßÀ» °æ¿ì(ÇØ´ç ¹®ÀÚ°¡ Æ÷ÇÔµÇÁö ¾ÊÀ» °æ¿ì) NULL ¹®ÀÚ¸¦ ¹ÝÈ¯ÇÔ
+	//íŠ¹ì •í•œ ë¬¸ìžë¥¼ ì°¾ê³  ê·¸ ë¬¸ìžì˜ ì£¼ì†Œê°’ì„ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜
+	//ì£¼ì†Œê°’ì„ ì°¾ì§€ ëª»í–ˆì„ ê²½ìš°(í•´ë‹¹ ë¬¸ìžê°€ í¬í•¨ë˜ì§€ ì•Šì„ ê²½ìš°) NULL ë¬¸ìžë¥¼ ë°˜í™˜í•¨
 	//strstr -> string string
-	//strchr°ú µ¿ÀÏÇÏ°Ô ÀÛµ¿ÇÏÁö¸¸ ¹®ÀÚ 1°³ ÀÌ»óÀ» Ã£À» ¼ö ÀÖÀ½
-	printf("¹®ÀÚ¿­ 1ÀÇ T¹®ÀÚ Æ÷ÇÔ ¿©ºÎ : %d\n", strchr(string, 'T') != NULL);
-	printf("¹®ÀÚ¿­ 2ÀÇ World¹®ÀÚ Æ÷ÇÔ ¿©ºÎ : %d\n", strstr(string2, "World") != NULL);
+	//strchrê³¼ ë™ì¼í•˜ê²Œ ìž‘ë™í•˜ì§€ë§Œ ë¬¸ìž 1ê°œ ì´ìƒì„ ì°¾ì„ ìˆ˜ ìžˆìŒ
+	printf("ë¬¸ìžì—´ 1ì˜ Të¬¸ìž í¬í•¨ ì—¬ë¶€ : %d\n", strchr(string, 'T') != NULL);
+	printf("ë¬¸ìžì—´ 2ì˜ Worldë¬¸ìž í¬í•¨ ì—¬ë¶€ : %d\n", strstr(string2, "World") != NULL);
 
 	
 	//_strrev -> string reverse
-	//¹®ÀÚ¿­ÀÇ ¹®ÀÚ¸¦ ¹ÝÀü½ÃÅ´
-	printf("\n¹®ÀÚ¿­ 1 ¹ÝÀü : %s\n", _strrev(string));
+	//ë¬¸ìžì—´ì˜ ë¬¸ìžë¥¼ ë°˜ì „ì‹œí‚´
+	printf("\në¬¸ìžì—´ 1 ë°˜ì „ : %s\n", _strrev(string));
 	//_strlwr -> string lowercase
-	//¹®ÀÚ¿­ÀÇ ¹®ÀÚ¸¦ ¼Ò¹®ÀÚ·Î º¯È¯
-	printf("¹®ÀÚ¿­ 1 ¼Ò¹®ÀÚ·Î º¯È¯ : %s\n", _strlwr(string));
+	//ë¬¸ìžì—´ì˜ ë¬¸ìžë¥¼ ì†Œë¬¸ìžë¡œ ë³€í™˜
+	printf("ë¬¸ìžì—´ 1 ì†Œë¬¸ìžë¡œ ë³€í™˜ : %s\n", _strlwr(string));
 	//_strupr -> string uppercase
-	//¹®ÀÚ¿­ÀÇ ¹®ÀÚ¸¦ ´ë¹®ÀÚ·Î º¯È¯
-	printf("¹®ÀÚ¿­ 2 ´ë¹®ÀÚ·Î º¯È¯ : %s\n\n", _strupr(string2));
+	//ë¬¸ìžì—´ì˜ ë¬¸ìžë¥¼ ëŒ€ë¬¸ìžë¡œ ë³€í™˜
+	printf("ë¬¸ìžì—´ 2 ëŒ€ë¬¸ìžë¡œ ë³€í™˜ : %s\n\n", _strupr(string2));
 
 	char str[20] = "";
-	printf("¹®ÀÚ¿­ 1 ÀÔ·Â : ");
+	printf("ë¬¸ìžì—´ 1 ìž…ë ¥ : ");
 	scanf("%s%*c", str);
 	//getchar();
-	//¹öÆÛ¿¡¼­ ¹®ÀÚ ÇÏ³ª¸¦ »©³¿
+	//ë²„í¼ì—ì„œ ë¬¸ìž í•˜ë‚˜ë¥¼ ë¹¼ëƒ„
 
 	char ch = '\0';
-	printf("\n¹®ÀÚ ÀÔ·Â : ");
+	printf("\në¬¸ìž ìž…ë ¥ : ");
 	scanf("%c%*s", &ch);
-	//getchar ¾øÀÌ´Â %c°¡ °³Çà¹®ÀÚ¸¦ ÀÎ½ÄÇÏ¿© scanf¸¦ Á¦´ë·Î ½ÇÇàÇÏÁö ¸øÇÔ
+	//getchar ì—†ì´ëŠ” %cê°€ ê°œí–‰ë¬¸ìžë¥¼ ì¸ì‹í•˜ì—¬ scanfë¥¼ ì œëŒ€ë¡œ ì‹¤í–‰í•˜ì§€ ëª»í•¨
 
 	char str3[10] = "";
-	printf("\n¹®ÀÚ¿­ 2 ÀÔ·Â : ");
+	printf("\në¬¸ìžì—´ 2 ìž…ë ¥ : ");
 	scanf("%s", &str3);
 
-	printf("\n¹®ÀÚ¿­ 1 : %s, ¹®ÀÚ : %c, ¹®ÀÚ¿­ 2 : %s\n", str, ch, str3);
+	printf("\në¬¸ìžì—´ 1 : %s, ë¬¸ìž : %c, ë¬¸ìžì—´ 2 : %s\n", str, ch, str3);
 	getchar();
 
-	printf("\n¹®ÀÚ¿­ 1 ÀÔ·Â : ");
+	printf("\në¬¸ìžì—´ 1 ìž…ë ¥ : ");
 	scanf("%[^\n]s", string);
-	//[^\n] -> °³Çà¹®ÀÚ Àü±îÁö ¸ðµç ¹®ÀÚ¸¦ ÀÔ·Â¹ÞÀ½
-	//%[*][width][modifiers]type ¿¡¼­ modifiers¿¡ ÇØ´çµÊ
-	//[a-z] a¿¡¼­z±îÁö ÀÔ·Â¹ÞÀ½
-	//[A-z] ¸ðµç ¾ËÆÄºªÀ» ÀÔ·Â¹ÞÀ½
+	//[^\n] -> ê°œí–‰ë¬¸ìž ì „ê¹Œì§€ ëª¨ë“  ë¬¸ìžë¥¼ ìž…ë ¥ë°›ìŒ
+	//%[*][width][modifiers]type ì—ì„œ modifiersì— í•´ë‹¹ë¨
+	//[a-z] aì—ì„œzê¹Œì§€ ìž…ë ¥ë°›ìŒ
+	//[A-z] ëª¨ë“  ì•ŒíŒŒë²³ì„ ìž…ë ¥ë°›ìŒ
 
-	printf("\n¹®ÀÚ¿­ 2 ÀÔ·Â : ");
+	printf("\në¬¸ìžì—´ 2 ìž…ë ¥ : ");
 	scanf("%s", string2);
 
-	printf("\n===== ¹®ÀÚ¿­ ÀÔ·Â °á°ú =====\n");
-	printf("¹®ÀÚ¿­ 1 : %s\n", string);
-	printf("¹®ÀÚ¿­ 2 : %s\n", string2);
+	printf("\n===== ë¬¸ìžì—´ ìž…ë ¥ ê²°ê³¼ =====\n");
+	printf("ë¬¸ìžì—´ 1 : %s\n", string);
+	printf("ë¬¸ìžì—´ 2 : %s\n", string2);
 
 	/*
-	ÀÌ¸§ :
-	³ªÀÌ : Á¤¼ö·Î ÀÔ·Â¹Þ±â
-	¼ºº° : %c·Î ÀÔ·Â¹Þ±â(M or W)
-	ÁÖ¼Ò : ¶ç¾î¾²±â Æ÷ÇÔ
-	°ÔÀÓ °³¹ßÀÚ°¡ µÇ°í ½ÍÀº ÀÌÀ¯ : ¶ç¾î¾²±â Æ÷ÇÔ
-	ÇÑÁÙ¸¶´Ù È­¸é Áö¿ì°í ´Ù½Ã ÀÔ·Â
-	¸¶Áö¸· ÀÔ·Â ¹ÞÀºÈÄ È­¸é Áö¿ì°í ÀÔ·ÂÇÑ Á¤º¸ ÀüºÎ Ãâ·Â
+	ì´ë¦„ :
+	ë‚˜ì´ : ì •ìˆ˜ë¡œ ìž…ë ¥ë°›ê¸°
+	ì„±ë³„ : %cë¡œ ìž…ë ¥ë°›ê¸°(M or W)
+	ì£¼ì†Œ : ë„ì–´ì“°ê¸° í¬í•¨
+	ê²Œìž„ ê°œë°œìžê°€ ë˜ê³  ì‹¶ì€ ì´ìœ  : ë„ì–´ì“°ê¸° í¬í•¨
+	í•œì¤„ë§ˆë‹¤ í™”ë©´ ì§€ìš°ê³  ë‹¤ì‹œ ìž…ë ¥
+	ë§ˆì§€ë§‰ ìž…ë ¥ ë°›ì€í›„ í™”ë©´ ì§€ìš°ê³  ìž…ë ¥í•œ ì •ë³´ ì „ë¶€ ì¶œë ¥
 	*/
 }

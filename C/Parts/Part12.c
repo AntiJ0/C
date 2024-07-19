@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Part12.h"
 
 void Part12()
@@ -12,18 +12,18 @@ void Part12()
 void MemoryAllocation()
 {
 	/*
-	Á¤Àû µ¿Àû Â÷ÀÌ
-	µ¿Àû - runtime -> ÇÁ·Î±×·¥ÀÌ ½ÇÇàµÉ ¶§ °áÁ¤
-	Á¤Àû - compileTime -> ÄÄÆÄÀÏÇÏ´Â µµÁß¿¡ °áÁ¤ 
+	ì •ì  ë™ì  ì°¨ì´
+	ë™ì  - runtime -> í”„ë¡œê·¸ë¨ì´ ì‹¤í–‰ë  ë•Œ ê²°ì •
+	ì •ì  - compileTime -> ì»´íŒŒì¼í•˜ëŠ” ë„ì¤‘ì— ê²°ì • 
 	
-	µ¿Àû ÇÒ´ç
-	ÇÁ·Î±×·¥ÀÌ ½ÇÇà Áß¿¡ »ç¿ëÀÚ°¡ ÇÊ¿äÇÑ ¸¸Å­ ¸Ş¸ğ¸®¸¦ ÇÒ´çÇÏ°Å³ª ÇØÁ¦ÇÒ ¼ö ÀÖ´Â ±â´É
-	¸Ş¸ğ¸®¸¦ ÇÒ´çÇÏ°í »ç¿ëÇÑ µÚ ÇØÁ¦ÇÏÁö ¾ÊÀ¸¸é ¸Ş¸ğ¸® ´©¼ö(Memory Leak)°¡ ÀÏ¾î³²
+	ë™ì  í• ë‹¹
+	í”„ë¡œê·¸ë¨ì´ ì‹¤í–‰ ì¤‘ì— ì‚¬ìš©ìê°€ í•„ìš”í•œ ë§Œí¼ ë©”ëª¨ë¦¬ë¥¼ í• ë‹¹í•˜ê±°ë‚˜ í•´ì œí•  ìˆ˜ ìˆëŠ” ê¸°ëŠ¥
+	ë©”ëª¨ë¦¬ë¥¼ í• ë‹¹í•˜ê³  ì‚¬ìš©í•œ ë’¤ í•´ì œí•˜ì§€ ì•Šìœ¼ë©´ ë©”ëª¨ë¦¬ ëˆ„ìˆ˜(Memory Leak)ê°€ ì¼ì–´ë‚¨
 
-	c¾ğ¾î¿¡¼­ µ¿ÀûÇÒ´çÀ» ÇÏ´Â ¹æ¹ı
+	cì–¸ì–´ì—ì„œ ë™ì í• ë‹¹ì„ í•˜ëŠ” ë°©ë²•
 
 	malloc -> memory allocation
-	malloc(µ¿Àû ÇÒ´çÇÒ Å©±â) -> °ıÈ£ ¾ÈÀÇ Å©±â¸¸Å­ µ¿ÀûÇÒ´ç
+	malloc(ë™ì  í• ë‹¹í•  í¬ê¸°) -> ê´„í˜¸ ì•ˆì˜ í¬ê¸°ë§Œí¼ ë™ì í• ë‹¹
 
 	calloc -> clear allocation
 
@@ -39,11 +39,11 @@ void MemoryAllocation()
 	*intPtr = 10;
 	*fltPtr = 3.14f;
 
-	printf("===== µ¿Àû ÇÒ´ç °á°ú =====\n");
+	printf("===== ë™ì  í• ë‹¹ ê²°ê³¼ =====\n");
 	printf("int*(%p) : %d\n", intPtr, *intPtr);
 	printf("float*(%p) : %f\n", fltPtr, *fltPtr);
 
-	//µ¿ÀûÇÒ´ç ÇØÁ¦´Â ÇÒ´çÇÑ ¼ø¼­ÀÇ ¿ª¼ø
+	//ë™ì í• ë‹¹ í•´ì œëŠ” í• ë‹¹í•œ ìˆœì„œì˜ ì—­ìˆœ
 	SAFE_FREE(fltPtr);
 	//if (fltPtr)
 	//{ 
@@ -56,18 +56,18 @@ void MemoryAllocation()
 	if (intPtr != NULL)
 		*intPtr = 10;
 
-	//printf("\n===== ÇØÁ¦ °á°ú =====\n");
+	//printf("\n===== í•´ì œ ê²°ê³¼ =====\n");
 	//printf("int*(%p) : %d\n", intPtr, *intPtr);
 	//printf("float*(%p) : %f\n", fltPtr, *fltPtr);
 
 	int len = 0;
 
-	printf("\nÃÊ±â ¹è¿­ Å©±â ÀÔ·Â : ");
+	printf("\nì´ˆê¸° ë°°ì—´ í¬ê¸° ì…ë ¥ : ");
 	scanf("%d", &len);
 
 	int* arr = (int*)malloc(sizeof(int) * len);
 	assert(arr != NULL);
-	printf("¹è¿­ ÀçÇÒ´ç ¿Ï·á! ÃÊ±â ¹è¿­ ÁÖ¼Ò : %p\n", arr);
+	printf("ë°°ì—´ ì¬í• ë‹¹ ì™„ë£Œ! ì´ˆê¸° ë°°ì—´ ì£¼ì†Œ : %p\n", arr);
 
 	int ordinal = 0;
 	int input = 0;
@@ -76,7 +76,7 @@ void MemoryAllocation()
 	
 	while (true)
 	{
-		printf("%d¹øÂ° Á¤¼ö ÀÔ·Â : ", ordinal + 1);
+		printf("%dë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ", ordinal + 1);
 		scanf("%d", &input);
 
 		if (input == 0)
@@ -93,13 +93,13 @@ void MemoryAllocation()
 
 			SAFE_FREE(arr);
 			arr = newArr;
-			printf("¹è¿­ ÀçÇÒ´ç ¿Ï·á! ÇöÀç ¹è¿­ ÁÖ¼Ò : %p\n", arr);
+			printf("ë°°ì—´ ì¬í• ë‹¹ ì™„ë£Œ! í˜„ì¬ ë°°ì—´ ì£¼ì†Œ : %p\n", arr);
 		}
 
 		arr[ordinal++] = input;
 	}
 
-	printf("\n===== µ¿Àû ÇÒ´ç ¹è¿­ ¿ø¼Ò =====\n");
+	printf("\n===== ë™ì  í• ë‹¹ ë°°ì—´ ì›ì†Œ =====\n");
 	for (int i = 0; i < ordinal; ++i)
 		printf("%d ", arr[i]);
 
@@ -113,10 +113,10 @@ void TwoDimensionalArrayMemoryAllocation()
 	int row = 0;
 	int col = 0;
 
-	printf("Çà·Ä Å©±â ÀÔ·Â : ");
+	printf("í–‰ë ¬ í¬ê¸° ì…ë ¥ : ");
 	scanf("%d %d", &row, &col);
 
-	//2Â÷¿ø ¹è¿­ matrix¸¦ µ¿Àû ÇÒ´ç
+	//2ì°¨ì› ë°°ì—´ matrixë¥¼ ë™ì  í• ë‹¹
 
 	int** matrix = (int**)malloc(sizeof(int*) * row);
 	assert(matrix != NULL);
@@ -135,7 +135,7 @@ void TwoDimensionalArrayMemoryAllocation()
 		for (int j = 0; j < col; ++j)
 			matrix[i][j] = ++num;
 
-	printf("\n===== Çà·Ä ¿ø¼Ò =====\n");
+	printf("\n===== í–‰ë ¬ ì›ì†Œ =====\n");
 	for (int i = 0; i < row; ++i)
 	{
 		for (int j = 0; j < col; ++j)
@@ -157,23 +157,23 @@ void ClearAllocation()
 {
 	int len = 0;
 
-	printf("¹è¿­ Å©±â ÀÔ·Â : ");
+	printf("ë°°ì—´ í¬ê¸° ì…ë ¥ : ");
 	scanf("%d", &len);
 
 	int* arr1 = (int*)malloc(sizeof(int) * len);
 	int* arr2 = (int*)calloc(len, sizeof(int));
 	int* arr3 = (int*)ClearAlloc(len, sizeof(int));
 
-	printf("\n===== ¹è¿­ 1 ¿ø¼Ò =====\n");
+	printf("\n===== ë°°ì—´ 1 ì›ì†Œ =====\n");
 	for (int i = 0; i < len; ++i)
 		printf("%d ", arr1[i]);
 
-	printf("\n===== ¹è¿­ 2 ¿ø¼Ò =====\n");
+	printf("\n===== ë°°ì—´ 2 ì›ì†Œ =====\n");
 	for (int i = 0; i < len; ++i)
 		printf("%d ", arr2[i]);
-	//calloc -> 0ÃÊ±âÈ­¸¦ ÇØÁÖ¸ç µ¿Àû ÇÒ´çÇÔ
+	//calloc -> 0ì´ˆê¸°í™”ë¥¼ í•´ì£¼ë©° ë™ì  í• ë‹¹í•¨
 
-	printf("\n===== ¹è¿­ 3 ¿ø¼Ò =====\n");
+	printf("\n===== ë°°ì—´ 3 ì›ì†Œ =====\n");
 	for (int i = 0; i < len; ++i)
 		printf("%d ", arr3[i]);
 
@@ -191,7 +191,7 @@ void* ClearAlloc(int count, int size)
 	//for (int i = 0; i < totalSize; ++i)
 	//	*((char*)buffer + i) = 0;
 
-	//memoryset, À§ÀÇ ±â´ÉÀ» ´ëÃ¼ÇØÁÜ
+	//memoryset, ìœ„ì˜ ê¸°ëŠ¥ì„ ëŒ€ì²´í•´ì¤Œ
 	memset(buffer, 0, totalSize);
 
 	return buffer;
@@ -201,12 +201,12 @@ void ReAllocation()
 {
 	int len = 0;
 
-	printf("ÃÊ±â ¹è¿­ Å©±â ÀÔ·Â : ");
+	printf("ì´ˆê¸° ë°°ì—´ í¬ê¸° ì…ë ¥ : ");
 	scanf("%d", &len);
 
 	int* arr = (int*)malloc(sizeof(int) * len);
 	assert(arr != NULL);
-	printf("¹è¿­ ÀçÇÒ´ç ¿Ï·á! ÃÊ±â ¹è¿­ ÁÖ¼Ò : %p\n", arr);
+	printf("ë°°ì—´ ì¬í• ë‹¹ ì™„ë£Œ! ì´ˆê¸° ë°°ì—´ ì£¼ì†Œ : %p\n", arr);
 
 	int ordinal = 0;
 	int input = 0;
@@ -215,7 +215,7 @@ void ReAllocation()
 
 	while (true)
 	{
-		printf("%d¹øÂ° Á¤¼ö ÀÔ·Â : ", ordinal + 1);
+		printf("%dë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ", ordinal + 1);
 		scanf("%d", &input);
 
 		if (input == 0)
@@ -229,13 +229,13 @@ void ReAllocation()
 			arr = temp;
 			temp = NULL;
 
-			printf("¹è¿­ ÀçÇÒ´ç ¿Ï·á! ÇöÀç ¹è¿­ ÁÖ¼Ò : %p\n", arr);
+			printf("ë°°ì—´ ì¬í• ë‹¹ ì™„ë£Œ! í˜„ì¬ ë°°ì—´ ì£¼ì†Œ : %p\n", arr);
 		}
 
 		arr[ordinal++] = input;
 	}
 
-	printf("\n===== µ¿Àû ÇÒ´ç ¹è¿­ ¿ø¼Ò =====\n");
+	printf("\n===== ë™ì  í• ë‹¹ ë°°ì—´ ì›ì†Œ =====\n");
 	for (int i = 0; i < ordinal; ++i)
 		printf("%d ", arr[i]);
 

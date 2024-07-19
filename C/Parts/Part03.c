@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Part03.h"
 
 void Part03()
@@ -8,57 +8,57 @@ void Part03()
 
 void Operator()
 {
-	//³í¸® AND -> &&¿¥ÆÛ»÷µå ->	³í¸®°ª && ³í¸®°ª -> µÑ´Ù ÂüÀÏ °æ¿ì -> Âü -> ¾Æ´Ï¶ó¸é °ÅÁþ
-	//³í¸® OR -> ³í¸®°ª || ³í¸®°ª	-> µÑ´Ù °ÅÁþÀÏ °æ¿ì -> °ÅÁþ -> ¾Æ´Ï¶ó¸é Âü
-	//³í¸® NOT -> !³í¸®°ª -> ³í¸®°ªÀÇ ¹Ý´ë°ª
+	//ë…¼ë¦¬ AND -> &&ì— í¼ìƒŒë“œ ->	ë…¼ë¦¬ê°’ && ë…¼ë¦¬ê°’ -> ë‘˜ë‹¤ ì°¸ì¼ ê²½ìš° -> ì°¸ -> ì•„ë‹ˆë¼ë©´ ê±°ì§“
+	//ë…¼ë¦¬ OR -> ë…¼ë¦¬ê°’ || ë…¼ë¦¬ê°’	-> ë‘˜ë‹¤ ê±°ì§“ì¼ ê²½ìš° -> ê±°ì§“ -> ì•„ë‹ˆë¼ë©´ ì°¸
+	//ë…¼ë¦¬ NOT -> !ë…¼ë¦¬ê°’ -> ë…¼ë¦¬ê°’ì˜ ë°˜ëŒ€ê°’
 
-	//ºñ±³¿¬»êÀÚ ==, !=, >=, <=
+	//ë¹„êµì—°ì‚°ìž ==, !=, >=, <=
 
 	int num1 = 0, num2 = 0;
 	
-	printf("Á¤¼ö 2°³ ÀÔ·Â :");
+	printf("ì •ìˆ˜ 2ê°œ ìž…ë ¥ :");
 	scanf("%d %d", &num1, &num2);
 
-	//Áõ°¨¿¬»êÀÚ
+	//ì¦ê°ì—°ì‚°ìž
 
-	//Áõ°¡¿¬»êÀÚ(++) + °¨¼Ò¿¬»êÀÚ(--)
-	//ÀüÀ§, ÈÄÀ§
-	//´ÜÇ×¿¬»êÀÚ
+	//ì¦ê°€ì—°ì‚°ìž(++) + ê°ì†Œì—°ì‚°ìž(--)
+	//ì „ìœ„, í›„ìœ„
+	//ë‹¨í•­ì—°ì‚°ìž
 	//++num
 	//num++
 
-	printf("\n===== Áõ°¨¿¬»êÀÚ °á°ú =====\n");
+	printf("\n===== ì¦ê°ì—°ì‚°ìž ê²°ê³¼ =====\n");
 
-	printf("Áõ°¡¿¬»êÀÚ ÀüÀ§ num1 : %d\n", ++num1);
-	//ÀüÀ§¿¬»êÀÚ´Â Áï½Ã °è»êÀÌ Àû¿ë
-	printf("Áß°£°ª È®ÀÎ num1 : %d\n", num1);
-	printf("Áõ°¡¿¬»êÀÚ ÈÄÀ§ num1 : %d\n", num1++);
-	//ÈÄÀ§¿¬»êÀÚ´Â ÇöÀç ÁøÇàÁßÀÎ Çàµ¿À» ½ÇÇàÇÑ ÈÄ °è»êÀ» Àû¿ë
-	printf("ÃÖÁ¾°ª È®ÀÎ num1 : %d\n", num1);
+	printf("ì¦ê°€ì—°ì‚°ìž ì „ìœ„ num1 : %d\n", ++num1);
+	//ì „ìœ„ì—°ì‚°ìžëŠ” ì¦‰ì‹œ ê³„ì‚°ì´ ì ìš©
+	printf("ì¤‘ê°„ê°’ í™•ì¸ num1 : %d\n", num1);
+	printf("ì¦ê°€ì—°ì‚°ìž í›„ìœ„ num1 : %d\n", num1++);
+	//í›„ìœ„ì—°ì‚°ìžëŠ” í˜„ìž¬ ì§„í–‰ì¤‘ì¸ í–‰ë™ì„ ì‹¤í–‰í•œ í›„ ê³„ì‚°ì„ ì ìš©
+	printf("ìµœì¢…ê°’ í™•ì¸ num1 : %d\n", num1);
 
-	printf("°¨¼Ò¿¬»êÀÚ ÈÄÀ§ num1 : %d\n", num2--);
-	printf("Áß°£°ª È®ÀÎ num1 : %d\n", num2);
-	printf("°¨¼Ò¿¬»êÀÚ ÀüÀ§ num1 : %d\n", --num2);
-	printf("ÃÖÁ¾°ª È®ÀÎ num1 : %d\n", num2);
+	printf("ê°ì†Œì—°ì‚°ìž í›„ìœ„ num1 : %d\n", num2--);
+	printf("ì¤‘ê°„ê°’ í™•ì¸ num1 : %d\n", num2);
+	printf("ê°ì†Œì—°ì‚°ìž ì „ìœ„ num1 : %d\n", --num2);
+	printf("ìµœì¢…ê°’ í™•ì¸ num1 : %d\n", num2);
 
-	printf("\n===== ºñÆ® ¿¬»êÀÚ °á°ú =====\n");
-	//ºñÆ®¿¬»êÀÚ -> ¼ö¸¦ ºñÆ® ´ÜÀ§·Î ÂÉ°³¼­ ¿¬»ê
+	printf("\n===== ë¹„íŠ¸ ì—°ì‚°ìž ê²°ê³¼ =====\n");
+	//ë¹„íŠ¸ì—°ì‚°ìž -> ìˆ˜ë¥¼ ë¹„íŠ¸ ë‹¨ìœ„ë¡œ ìª¼ê°œì„œ ì—°ì‚°
 	printf("%d & %d = %d\n", num1, num2, num1 & num2);
 	printf("%d | %d = %d\n", num1, num2, num1 | num2);
 	printf("%d ^ %d = %d\n", num1, num2, num1 ^ num2);
-	//^ -> ºñÆ® XOR¿¬»êÀÚ -> ¼­·Î °°À¸¸é °ÅÁþ	
+	//^ -> ë¹„íŠ¸ XORì—°ì‚°ìž -> ì„œë¡œ ê°™ìœ¼ë©´ ê±°ì§“	
 	printf("~%d = %d\n", num1, ~num1);
-	//~ -> ºñÆ® NOT¿¬»êÀÚ -> 0°ú 1À» µÚ¹Ù²Þ
-	//¾ÕÀÇ ºÎÈ£ºÎºÐÀÇ 0µéµµ ÀüºÎ 1·Î µÚ¹Ù²Þ
-	//°á°ú°ª = ¿ø·¡ ¼ö¿¡¼­ ºÎÈ£¸¦ ¹Ù²Û µÚ -1
+	//~ -> ë¹„íŠ¸ NOTì—°ì‚°ìž -> 0ê³¼ 1ì„ ë’¤ë°”ê¿ˆ
+	//ì•žì˜ ë¶€í˜¸ë¶€ë¶„ì˜ 0ë“¤ë„ ì „ë¶€ 1ë¡œ ë’¤ë°”ê¿ˆ
+	//ê²°ê³¼ê°’ = ì›ëž˜ ìˆ˜ì—ì„œ ë¶€í˜¸ë¥¼ ë°”ê¾¼ ë’¤ -1
 	printf("%d << 2 = %d\n", num1, num1 << 2);
 	printf("%d >> 2 = %d\n", num1, num1 >> 2);
-	//ºñÆ® ½¬ÇÁÆ® ¿¬»êÀÚ
-	//ºñÆ®¸¦ ÀüºÎ È­»ìÇ¥ ¹æÇâÀ¸·Î ¿Å±è
+	//ë¹„íŠ¸ ì‰¬í”„íŠ¸ ì—°ì‚°ìž
+	//ë¹„íŠ¸ë¥¼ ì „ë¶€ í™”ì‚´í‘œ ë°©í–¥ìœ¼ë¡œ ì˜®ê¹€
 	//1010 << 2 = 10 1000, 10 1000 >> 3 = 0101
 
-	printf("\n===== Á¶°Ç ¿¬»êÀÚ =====\n");
+	printf("\n===== ì¡°ê±´ ì—°ì‚°ìž =====\n");
 	printf("%d < %d ? : = %d", num1, num2, num1 < num2 ? num1 : num2);
-	//(Âü or °ÅÁþ) ? (ÂüÀÏ °æ¿ì °á°ú°ª) : (°ÅÁþÀÏ °æ¿ì °á°ú°ª)
-	//? ¾Õ¿¡ ½ÄÀÌ ÇÊ¿äÇÑ °ÍÀÌ ¾Æ´Ñ Âü or °ÅÁþÀÌ ÀÖ¾î¾ß ÇÔ
+	//(ì°¸ or ê±°ì§“) ? (ì°¸ì¼ ê²½ìš° ê²°ê³¼ê°’) : (ê±°ì§“ì¼ ê²½ìš° ê²°ê³¼ê°’)
+	//? ì•žì— ì‹ì´ í•„ìš”í•œ ê²ƒì´ ì•„ë‹Œ ì°¸ or ê±°ì§“ì´ ìžˆì–´ì•¼ í•¨
 }
